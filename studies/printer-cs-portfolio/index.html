@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>
+      From Frustration to Insight: The Campus Printer Experience • Efram Geller
+    </title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Merriweather:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Back Button -->
+    <div class="cs-back-button">
+      <a href="/">← Back to Portfolio</a>
+    </div>
+
+    <!-- Hero -->
+    <section class="cs-hero">
+      <div class="cs-hero__overlay"></div>
+      <div class="cs-hero__content">
+        <img
+          src="images/interface/brown_logo.png"
+          alt="Brown University Logo"
+          class="cs-hero__logo"
+        />
+        <h1 class="cs-hero__title">
+          From Frustration to Insight: The Campus Printer Experience
+        </h1>
+        <p class="cs-hero__author">By Efram Geller</p>
+        <p class="cs-hero__meta">
+          UX Research • Brown University • Campus Technology
+        </p>
+        <a href="#overview" class="cs-hero__cta">Explore the Story ↓</a>
+      </div>
+    </section>
+
+    <!-- Project Info -->
+    <section class="cs-project-info">
+      <div class="cs-project-info__grid">
+        <div class="cs-project-info__item">
+          <h3>My Role</h3>
+          <p>Product Designer,<br />UX Researcher</p>
+        </div>
+        <div class="cs-project-info__item">
+          <h3>Project</h3>
+          <p>Brown CS Department</p>
+        </div>
+        <div class="cs-project-info__item">
+          <h3>Timeline</h3>
+          <p>2 weeks (2025)</p>
+        </div>
+        <div class="cs-project-info__item">
+          <h3>Tools Used</h3>
+          <p>Figma, HTML<br />CSS, React</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sub-Navigation -->
+    <nav class="cs-subnav">
+      <ul class="cs-subnav__list">
+        <li><a href="#overview" class="cs-subnav__link active">Overview</a></li>
+        <li><a href="#interface" class="cs-subnav__link">Interface</a></li>
+        <li><a href="#research" class="cs-subnav__link">Research</a></li>
+        <li>
+          <a href="#observations" class="cs-subnav__link">Observations</a>
+        </li>
+        <li><a href="#personas" class="cs-subnav__link">Personas</a></li>
+        <li><a href="#storyboard" class="cs-subnav__link">Storyboard</a></li>
+        <li><a href="#conclusion" class="cs-subnav__link">Conclusion</a></li>
+      </ul>
+    </nav>
+
+    <!-- Overview -->
+    <section id="overview" class="cs-section cs-section--context">
+      <div>
+        <h2 class="cs-section__title">🎯 Context &amp; Problem</h2>
+        <p class="cs-section__text">
+          Imagine you're a brand-new student rushing to print an assignment
+          minutes before class.
+        </p>
+        <p class="cs-section__text">
+          You reach the campus printer only to be met with unclear Wi-Fi steps,
+          confusing card swipes, and zero guidance on how to send your document
+          from phone to printer.
+        </p>
+        <p class="cs-section__text">
+          This portfolio piece explores how a seemingly trivial interface, which
+          is used often, can become a major obstacle for first-time
+          users—especially freshmen.
+        </p>
+      </div>
+      <div class="cs-highlight">
+        <strong>Key Focus:</strong> We'll walk through a sketch of the system,
+        our research methods, real observations, and a final set of takeaways
+        that highlight the importance of user-centric design.
+      </div>
+    </section>
+
+    <!-- Interface Sketch -->
+    <section id="interface" class="cs-section">
+      <h2 class="cs-section__title">✏️ Printer Interface Sketch</h2>
+      <div class="cs-section__text">
+        <p>
+          Below is a sketch of the printer interface that users work with every
+          day:
+        </p>
+        <div class="cs-solution__media">
+          <img
+            src="images/interface/sketch.png"
+            alt="Printer Interface Sketch"
+            style="width: 100%; border-radius: 8px"
+          />
+        </div>
+        <div class="cs-solution__text">
+          <h3>Interface Details:</h3>
+          <ul>
+            <li>
+              This sketch represents the school printer interface designed to
+              manage secure printing.
+            </li>
+            <li>
+              Users first connect via school Wi-Fi, then authenticate by swiping
+              their card at the designated slot.
+            </li>
+            <li>
+              Navigation buttons allow users to confirm or cancel actions.
+            </li>
+            <li>
+              The interface itself is user friendly, but connecting to the
+              printer can be difficult.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research Approach -->
+    <section id="research" class="cs-section">
+      <h2 class="cs-section__title">🔬 Research Approach</h2>
+      <div class="cs-section__text">
+        <p>
+          To better understand real-world printer challenges, we sought out
+          Brown University students and asked them questions while they were
+          actively using the printer.
+        </p>
+        <p>
+          Our primary goal was to capture genuine reactions and frustrations in
+          context, rather than relying on hypothetical scenarios.
+        </p>
+        <h3>Key Interview Questions:</h3>
+        <ul>
+          <li>
+            Can you describe your experience the first time you used the school
+            printer system?
+          </li>
+          <li>
+            For a first-time user, how easy or difficult was it to understand
+            how to use the printer system?
+          </li>
+          <li>
+            Could you walk me through the steps you take from logging in on the
+            school Wi-Fi to swiping your card?
+          </li>
+          <li>
+            How clear were the instructions you received (or found) when
+            connecting to the school Wi-Fi?
+          </li>
+          <li>
+            When multiple print jobs show up, how do you know which one to
+            select or cancel?
+          </li>
+          <li>
+            What challenges or frustrations have you encountered while using the
+            printer interface?
+          </li>
+          <li>How do you feel when you use this printer system? Why?</li>
+          <li>
+            If you could change one thing about the printer interface, what
+            would it be and why?
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Observations -->
+    <section id="observations" class="cs-section">
+      <h2 class="cs-section__title">👀 Observations &amp; Interviews</h2>
+      <div class="cs-section__text">
+        <p>
+          Through our on-site observations and interviews with three Brown
+          University students (including freshmen and upperclassmen), several
+          themes emerged:
+        </p>
+        <ul>
+          <li>
+            <strong>Unclear Document Sending Process:</strong> "I had no idea
+            how to send my document to the printer; I had to Google it."
+          </li>
+          <li>
+            <strong>Wrong Card Swipe Orientation:</strong> Students often swiped
+            incorrectly and had to retry.
+          </li>
+          <li>
+            <strong>Upload Delay:</strong> People tried to print immediately but
+            didn't realize there's a 1-minute upload time. No progress indicator
+            caused confusion.
+          </li>
+          <li>
+            <strong>Cost & Balance Ambiguity:</strong> No easy way to see how
+            much money remains or how much each print will cost before
+            committing to print.
+          </li>
+          <li>
+            <strong>Multiple Doc Confusion:</strong> With multiple documents
+            printed, it's tough to see where one doc ends and the next begins on
+            the paper stack.
+          </li>
+          <li>
+            <strong>Phone Printing Hassles:</strong> "Printing from my phone was
+            so frustrating; I didn't realize I had to be on Brown Wi-Fi first."
+          </li>
+          <li>
+            <strong>Physical Printer Instructions Lacking:</strong> A small QR
+            code is available, but "it's low to the ground and easy to miss."
+          </li>
+        </ul>
+        <p>
+          Many users reported feeling frustrated and anxious, especially under
+          time pressure. Despite an otherwise "straightforward" interface, the
+          learning curve for new users was steep.
+        </p>
+      </div>
+    </section>
+
+    <!-- Personas -->
+    <section id="personas" class="cs-section">
+      <h2 class="cs-section__title">👥 Personas</h2>
+      <div class="cs-section__text">
+        <p>
+          The empathy maps below capture the experiences and frustrations of two
+          key user groups: Tania, the tech nervous freshman, and Lucas, the
+          power user.
+        </p>
+        <div class="cs-empathy-maps">
+          <div class="cs-empathy-map">
+            <img
+              src="images/empathy-maps/tania_map.png"
+              alt="Tania's Empathy Map"
+            />
+            <h3>Tania: The Tech Nervous Freshman</h3>
+            <p>
+              Tania is a first-semester freshman who has never printed on a
+              campus printer before. She's juggling classes, new routines, and
+              campus life, so she rarely has time to learn new technology in
+              advance.
+            </p>
+            <p>
+              Her biggest hurdle is the confusing, multi-step process to get
+              documents onto the printer (especially from her phone), and she
+              often feels pressured when there are people waiting behind her.
+            </p>
+          </div>
+          <div class="cs-empathy-map">
+            <img
+              src="images/empathy-maps/lucas_map.png"
+              alt="Lucas's Empathy Map"
+            />
+            <h3>Lucas: The Power User</h3>
+            <p>
+              Lucas is a junior who prints frequently for various projects and
+              assignments. He's familiar with logging in and swiping his card,
+              so the basics aren't an issue.
+            </p>
+            <p>
+              However, he finds it clumsy to manage multiple print jobs in one
+              queue and has encountered unexpected wait times or confusing file
+              names. He prints often and struggles to keep track of how much
+              print money he has left.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Storyboard -->
+    <section id="storyboard" class="cs-section">
+      <h2 class="cs-section__title">🎬 Storyboard: Tania's Printing Journey</h2>
+      <div class="cs-section__text">
+        <p>
+          This 10-frame storyboard captures Tania's stressful path from arrival
+          at the printer to finally collecting her document. Each frame
+          highlights a key step—and potential frustration—in the process.
+        </p>
+        <div class="cs-storyboard">
+          <div class="cs-storyboard__frame">
+            <img src="images/storyboard/storyboard1.png" alt="Storyboard 1" />
+            <p class="cs-storyboard__caption">
+              1. Tania has class readings to print out and decides to use the
+              school printer for the first time
+            </p>
+          </div>
+          <div class="cs-storyboard__frame">
+            <img src="images/storyboard/storyboard2.png" alt="Storyboard 2" />
+            <p class="cs-storyboard__caption">
+              2. Swipes ID to printer, trying to see how to print. But there are
+              no instructions on the printer screen.
+            </p>
+          </div>
+          <div class="cs-storyboard__frame">
+            <img src="images/storyboard/storyboard3.png" alt="Storyboard 3" />
+            <p class="cs-storyboard__caption">
+              3. Confusion about the online printing instructions
+            </p>
+          </div>
+          <div class="cs-storyboard__frame">
+            <img src="images/storyboard/storyboard4.png" alt="Storyboard 4" />
+            <p class="cs-storyboard__caption">
+              4. Asking upperclassman for help understanding how to print
+            </p>
+          </div>
+          <div class="cs-storyboard__frame">
+            <img src="images/storyboard/storyboard5.png" alt="Storyboard 5" />
+            <p class="cs-storyboard__caption">
+              5. Finally logs into the correct Brown network, tries again.
+            </p>
+          </div>
+          <div class="cs-storyboard__frame">
+            <img src="images/storyboard/storyboard6.png" alt="Storyboard 6" />
+            <p class="cs-storyboard__caption">
+              6. Tania finally prints the pdf to myprinter
+            </p>
+          </div>
+          <div class="cs-storyboard__frame">
+            <img src="images/storyboard/storyboard7.png" alt="Storyboard 7" />
+            <p class="cs-storyboard__caption">
+              7. Tries swiping her ID multiple times, often in the wrong
+              orientation.
+            </p>
+          </div>
+          <div class="cs-storyboard__frame">
+            <img src="images/storyboard/storyboard8.png" alt="Storyboard 8" />
+            <p class="cs-storyboard__caption">
+              8. Wonders if she has enough print credit left.
+            </p>
+          </div>
+          <div class="cs-storyboard__frame">
+            <img src="images/storyboard/storyboard9.png" alt="Storyboard 9" />
+            <p class="cs-storyboard__caption">
+              9. Navigating this printer interface to print her readings
+            </p>
+          </div>
+          <div class="cs-storyboard__frame">
+            <img src="images/storyboard/storyboard10.png" alt="Storyboard 10" />
+            <p class="cs-storyboard__caption">
+              10. Relief! Paper finally prints, just in time for class.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Conclusion -->
+    <section id="conclusion" class="cs-section cs-reflection">
+      <h2 class="cs-section__title">💡 Conclusions &amp; Next Steps</h2>
+      <div class="cs-section__text">
+        <p>
+          This case study demonstrates how even a seemingly simple
+          interface—like a campus printer—can derail users if core interactions
+          are poorly communicated. By mapping out the steps, frustrations, and
+          emotional touchpoints, we've uncovered clear opportunities for
+          improvement:
+        </p>
+        <ul class="cs-reflection__list">
+          <li>
+            <strong>Wi-Fi Guidance:</strong> Prominent instructions for network
+            setup and phone printing.
+          </li>
+          <li>
+            <strong>Card Swipe Feedback:</strong> Clear visual cues indicating
+            proper swiping.
+          </li>
+          <li>
+            <strong>Real-Time Queue Updates:</strong> A progress bar or
+            "uploading" indicator to reduce confusion.
+          </li>
+          <li>
+            <strong>Cost Transparency:</strong> Showing balance and per-page
+            cost before sending a document to the printer, as well as on the
+            screen.
+          </li>
+        </ul>
+        <p>
+          Addressing these issues would not only lower user frustration but also
+          turn the Brown campus "printer panic" into a straightforward task.
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="cs-footer">
+      <a href="/">← Back to Portfolio</a><br />
+      Case Study Done by Efram Geller
+    </footer>
+  </body>
+</html>

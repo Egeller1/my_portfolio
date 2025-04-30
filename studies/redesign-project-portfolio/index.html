@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Kai Fan Website Redesign • Efram Geller</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Merriweather:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Back Button -->
+    <div class="cs-back-button">
+      <a href="/">← Back to Portfolio</a>
+    </div>
+
+    <!-- Hero -->
+    <section class="cs-hero">
+      <div class="cs-hero__overlay"></div>
+      <div class="cs-hero__content">
+        <img
+          src="images/brown_logo.png"
+          alt="Brown University Logo"
+          class="cs-hero__logo"
+        />
+        <h1 class="cs-hero__title">
+          From Frustration to Insight: The Campus Printer Experience
+        </h1>
+        <p class="cs-hero__author">By Efram Geller</p>
+        <p class="cs-hero__meta">
+          UX Research • Brown University • Campus Technology
+        </p>
+        <a href="#overview" class="cs-hero__cta">Explore the Story ↓</a>
+      </div>
+    </section>
+
+    <!-- Project Info -->
+    <section class="cs-project-info">
+      <div class="cs-project-info__grid">
+        <div class="cs-project-info__item">
+          <h3>My Role</h3>
+          <p>Product Designer,<br />UX Researcher</p>
+        </div>
+        <div class="cs-project-info__item">
+          <h3>Project</h3>
+          <p>Brown CS Department</p>
+        </div>
+        <div class="cs-project-info__item">
+          <h3>Timeline</h3>
+          <p>2 weeks (2025)</p>
+        </div>
+        <div class="cs-project-info__item">
+          <h3>Tools Used</h3>
+          <p>Figma, HTML<br />CSS, React</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sub-Navigation -->
+    <nav class="cs-subnav">
+      <ul class="cs-subnav__list">
+        <li><a href="#intro" class="cs-subnav__link active">Intro</a></li>
+        <li>
+          <a href="#usability" class="cs-subnav__link">Usability Analysis</a>
+        </li>
+        <li><a href="#process" class="cs-subnav__link">Redesign Process</a></li>
+        <li><a href="#style-guide" class="cs-subnav__link">Style Guide</a></li>
+        <li><a href="#mockup" class="cs-subnav__link">Mockup</a></li>
+        <li>
+          <a href="#final-outcome" class="cs-subnav__link">Final Outcome</a>
+        </li>
+        <li>
+          <a href="#fulfilled" class="cs-subnav__link"
+            >How Problems Were Solved</a
+          >
+        </li>
+        <li><a href="#reflections" class="cs-subnav__link">Reflections</a></li>
+      </ul>
+    </nav>
+
+    <!-- Intro Section -->
+    <section id="intro" class="cs-section cs-section--context">
+      <div>
+        <h2 class="cs-section__title">🎯 Introduction & Project Goals</h2>
+        <p class="cs-section__text">
+          As one of the few kosher restaurants in my hometown of Riverdale, New
+          York, Kai Fan has long been a go-to option for delivery. I chose to
+          redesign Kai Fan's website to address its outdated design, confusing
+          navigation, and poor visual hierarchy, all of which created
+          significant barriers to an enjoyable user experience.
+        </p>
+        <p class="cs-section__text">
+          My overarching goal was to build a modern, responsive, and visually
+          appealing interface that prioritizes user needs. By streamlining
+          navigation and ensuring clarity in design, I aimed to help customers
+          seamlessly find essential info—like hours, location, and menu
+          options—while reflecting Kai Fan's brand identity.
+        </p>
+        <p class="cs-section__text">
+          Go check it out for yourself!
+          <a
+            href="https://www.kaifancuisine.com/"
+            target="_blank"
+            rel="noopener"
+          >
+            https://www.kaifancuisine.com/
+          </a>
+        </p>
+      </div>
+      <div class="cs-highlight">
+        <strong>Key Focus:</strong> We'll walk through the usability analysis,
+        redesign process, and final implementation that transformed Kai Fan's
+        online presence into a user-friendly experience.
+      </div>
+    </section>
+
+    <!-- Usability Analysis Section -->
+    <section id="usability" class="cs-section">
+      <h2 class="cs-section__title">🔍 Usability Analysis</h2>
+      <div class="cs-section__text">
+        <p>
+          Using five core criteria—Efficiency, Memorability, Learnability,
+          Conceptual Model, and Accessibility—I analyzed how the original Kai
+          Fan website impacts user interactions and where it falls short.
+        </p>
+        <div class="cs-solution">
+          <div class="cs-solution__text">
+            <h3>Efficiency: Minimizing Wasted Steps & Friction</h3>
+            <ul>
+              <li>
+                The "A Destination" section tons of space with only two lines of
+                text, wasting valuable screen real estate while also looking
+                visually unnapealing
+              </li>
+              <li>
+                Multiple "Order Online" buttons create confusion about which one
+                to use.
+              </li>
+              <li>
+                The site lacks a built-in menu page—users must click "Order
+                Online," leading to an external site and adding friction for
+                simple menu browsing.
+              </li>
+              <li>
+                Key info like business hours and location is buried at the
+                bottom, forcing users to scroll and search for basic details.
+              </li>
+              <li>
+                On mobile, unoptimized images slow loading times, further
+                reducing efficiency.
+              </li>
+              <li>
+                Repetitive promotional text ("All you can eat sushi is back…")
+                clutters the homepage, making it harder to find important
+                information.
+              </li>
+            </ul>
+          </div>
+          <div class="cs-solution__text">
+            <h3>Memorability: Helping Returning Users Recall the Site</h3>
+            <ul>
+              <li>
+                Text-heavy promotions precede essential details (like hours,
+                location, and food options), making users repeatedly hunt for
+                key info.
+              </li>
+              <li>
+                Large image captions ("FRESH INGREDIENTS," "MASTER CHEF") appear
+                interactive but aren't clickable, creating confusion on
+                subsequent visits.
+              </li>
+              <li>
+                A lack of a distinctive color scheme or typography makes it
+                difficult for returning users to recognize Kai Fan's site from
+                others.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="cs-solution">
+          <div class="cs-solution__text">
+            <h3>Learnability: Quick Onboarding for New Visitors</h3>
+            <ul>
+              <li>
+                The "Order Online" button is not very noticeable, it blends into
+                the background due to a thin white outline that contrasts
+                poorly.
+              </li>
+              <li>
+                No hover effects or animations guide a first-time user's
+                attention.
+              </li>
+              <li>
+                The prominent "All you can eat sushi" banner competes visually
+                with key navigation elements.
+              </li>
+              <li>
+                Outdated visual hierarchy leads to multiple large text elements
+                vying for attention.
+              </li>
+            </ul>
+          </div>
+          <div class="cs-solution__text">
+            <h3>Conceptual Model & Accessibility</h3>
+            <ul>
+              <li>
+                The site funnels menu browsing into an external ordering system,
+                breaking users' expectations.
+              </li>
+              <li>
+                Contrast issues: White or light-colored text over background
+                images fails WCAG guidelines.
+              </li>
+              <li>
+                Redundant links and missing alternative text on images impair
+                screen reader navigation.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Redesign Process Section -->
+    <section id="process" class="cs-section">
+      <h2 class="cs-section__title">🎨 Redesign Process</h2>
+      <div class="cs-section__text">
+        <p>
+          I structured my redesign around four key stages: establishing a style
+          guide, creating wireframes, developing high-fidelity mockups, and
+          implementing the final design.
+        </p>
+        <div class="cs-solution">
+          <div class="cs-solution__media">
+            <img
+              src="images/Design_process.png"
+              alt="Original Kai Fan Website"
+              style="width: 100%; border-radius: 8px"
+            />
+          </div>
+          <div class="cs-solution__text">
+            <h3>Initial Analysis</h3>
+            <p>
+              The original website had several usability issues that needed to
+              be addressed. This iterative approach helped ensure that each
+              design decision was validated through user feedback and testing.
+              By the end, I had a cohesive redesign that addressed the major
+              pain points identified during the initial analysis.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Style Guide Section -->
+    <section id="style-guide" class="cs-section">
+      <h2 class="cs-section__title">🎨 Style Guide</h2>
+      <div class="cs-section__text">
+        <p>
+          A cohesive visual language was essential for transforming Kai Fan's
+          digital presence. The style guide below establishes the foundation for
+          a consistent, accessible, and engaging user experience.
+        </p>
+        <div class="cs-solution">
+          <div class="cs-solution__media">
+            <img
+              src="images/style_guide.png"
+              alt="Style Guide showing typography, colors, and components"
+              style="width: 100%; border-radius: 8px"
+            />
+          </div>
+          <div class="cs-solution__text">
+            <h3>Design System Highlights</h3>
+            <ul>
+              <li>
+                <strong>Typography:</strong> A harmonious trio of Roboto
+                (headlines), Open Sans and Raleway (body) creates clear visual
+                hierarchy while maintaining readability across devices
+              </li>
+              <li>
+                <strong>Color Palette:</strong> Teal primary color conveys
+                professionalism and trust, balanced with dark grey and white for
+                optimal contrast and WCAG compliance
+              </li>
+              <li>
+                <strong>Components:</strong> Consistent button styles, hover
+                states, and interactive elements ensure users always know what's
+                clickable
+              </li>
+              <li>
+                <strong>Brand Elements:</strong> Modernized logo and iconography
+                maintain brand recognition while elevating the visual experience
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mockup Section -->
+    <section id="mockup" class="cs-section">
+      <h2 class="cs-section__title">📱 Mockups</h2>
+      <div class="cs-section__text">
+        <p>
+          I produced high-fidelity mockups for mobile, tablet, and desktop
+          views, ensuring a seamless experience across all devices. Each design
+          variation maintains consistent elements while optimizing layouts for
+          different screen sizes.
+        </p>
+
+        <!-- Main Mockup -->
+        <div class="cs-solution">
+          <div class="cs-solution__media">
+            <img
+              src="images/main_mockup.png"
+              alt="Main mockup with detailed annotations"
+              style="width: 100%; border-radius: 8px; margin-bottom: 1.5rem"
+            />
+          </div>
+          <div class="cs-solution__text">
+            <h3>Key Design Decisions</h3>
+            <ul>
+              <li>
+                <strong>Visual Hierarchy:</strong> Clear content structure with
+                prominent call-to-action buttons
+              </li>
+              <li>
+                <strong>Navigation:</strong> Intuitive menu system with
+                consistent placement across breakpoints
+              </li>
+              <li>
+                <strong>Content Flow:</strong> Logical progression from hero
+                section to menu items
+              </li>
+              <li>
+                <strong>Responsive Elements:</strong> Flexible components that
+                adapt to various screen sizes
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 style="margin-top: 3rem">Responsive Layouts</h3>
+        <p>
+          The following images showcase additional views of the redesigned site
+          across different devices and states.
+        </p>
+
+        <!-- Device Mockups Grid -->
+        <div
+          style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+          "
+        >
+          <div>
+            <img
+              src="images/iphone_mockup.png"
+              alt="iPhone layout: 375×667 with a scrolling screen"
+              style="width: 100%; border-radius: 8px; margin-bottom: 1rem"
+            />
+            <p style="font-style: italic; color: #666">
+              iPhone layout: Optimized for one-handed navigation
+            </p>
+          </div>
+          <div>
+            <img
+              src="images/gallery_mockup.png"
+              alt="Gallery view mockup"
+              style="width: 100%; border-radius: 8px; margin-bottom: 1rem"
+            />
+            <p style="font-style: italic; color: #666">
+              Gallery View: Showcasing food imagery in an engaging grid layout
+            </p>
+          </div>
+          <div>
+            <img
+              src="images/menu_mockup.png"
+              alt="Menu modal mockup"
+              style="width: 100%; border-radius: 8px; margin-bottom: 1rem"
+            />
+            <p style="font-style: italic; color: #666">
+              Menu Modal: Easy-to-read format with clear categorization
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final Outcome Section -->
+    <section id="final-outcome" class="cs-section">
+      <h2 class="cs-section__title">✨ Final Outcome</h2>
+      <div class="cs-section__text">
+        <p>
+          The end result is a modern, welcoming, and intuitive website that
+          transforms Kai Fan's digital presence. By integrating consistent
+          design elements and prioritizing accessible, user-centric features,
+          the redesigned site invites users to explore the menu, check operating
+          hours, and place orders effortlessly.
+        </p>
+
+        <p class="cs-highlight" style="margin: 2rem 0">
+          Go check it out for yourself!
+          <a
+            href="https://egeller1.github.io/kaifan/"
+            target="_blank"
+            rel="noopener"
+            >https://egeller1.github.io/kaifan/</a
+          >
+        </p>
+
+        <!-- Core Website Views -->
+        <h3 class="cs-section__subtitle">Core Website Views</h3>
+        <div
+          class="cs-grid"
+          style="
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 2rem 0;
+          "
+        >
+          <div class="cs-grid__item">
+            <div
+              class="cs-image-container"
+              style="background: #f5f5f5; padding: 1rem; border-radius: 8px"
+            >
+              <img
+                src="./images/final_outcome/main_gallery1.png"
+                alt="Main page with first gallery picture"
+                style="width: 100%; border-radius: 4px"
+              />
+              <p
+                class="cs-caption"
+                style="margin-top: 0.5rem; font-style: italic; color: #666"
+              >
+                Main page with hero image
+              </p>
+            </div>
+          </div>
+          <div class="cs-grid__item">
+            <div
+              class="cs-image-container"
+              style="background: #f5f5f5; padding: 1rem; border-radius: 8px"
+            >
+              <img
+                src="./images/final_outcome/main_gallery2.png"
+                alt="Main page with second gallery picture"
+                style="width: 100%; border-radius: 4px"
+              />
+              <p
+                class="cs-caption"
+                style="margin-top: 0.5rem; font-style: italic; color: #666"
+              >
+                Alternative gallery view
+              </p>
+            </div>
+          </div>
+          <div class="cs-grid__item">
+            <div
+              class="cs-image-container"
+              style="background: #f5f5f5; padding: 1rem; border-radius: 8px"
+            >
+              <img
+                src="./images/final_outcome/destination.png"
+                alt="The Destination page"
+                style="width: 100%; border-radius: 4px"
+              />
+              <p
+                class="cs-caption"
+                style="margin-top: 0.5rem; font-style: italic; color: #666"
+              >
+                The "A Destination" section
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accessibility Features -->
+        <h3 class="cs-section__subtitle" style="margin-top: 3rem">
+          Accessibility & Internationalization
+        </h3>
+        <p>
+          The site is fully accessible across different languages, font sizes,
+          and screen types, ensuring an inclusive experience for all users.
+        </p>
+        <div
+          class="cs-grid"
+          style="
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 2rem 0;
+          "
+        >
+          <div class="cs-grid__item">
+            <div
+              class="cs-image-container"
+              style="background: #f5f5f5; padding: 1rem; border-radius: 8px"
+            >
+              <img
+                src="./images/final_outcome/german.png"
+                alt="Site in German language"
+                style="width: 100%; border-radius: 4px"
+              />
+              <p
+                class="cs-caption"
+                style="margin-top: 0.5rem; font-style: italic; color: #666"
+              >
+                Multilingual support
+              </p>
+            </div>
+          </div>
+          <div class="cs-grid__item">
+            <div
+              class="cs-image-container"
+              style="background: #f5f5f5; padding: 1rem; border-radius: 8px"
+            >
+              <img
+                src="./images/final_outcome/mobile.png"
+                alt="Mobile view"
+                style="width: 100%; border-radius: 4px"
+              />
+              <p
+                class="cs-caption"
+                style="margin-top: 0.5rem; font-style: italic; color: #666"
+              >
+                Responsive mobile layout
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Features -->
+        <h3 class="cs-section__subtitle" style="margin-top: 3rem">
+          Interactive Features
+        </h3>
+        <p>
+          Every component serves a clear purpose with intuitive interactions and
+          smooth transitions.
+        </p>
+        <div
+          class="cs-grid"
+          style="
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 2rem 0;
+          "
+        >
+          <div class="cs-grid__item">
+            <div
+              class="cs-image-container"
+              style="background: #f5f5f5; padding: 1rem; border-radius: 8px"
+            >
+              <img
+                src="./images/final_outcome/menu_modal.png"
+                alt="Menu modal view"
+                style="width: 100%; border-radius: 4px"
+              />
+              <p
+                class="cs-caption"
+                style="margin-top: 0.5rem; font-style: italic; color: #666"
+              >
+                Menu modal interface
+              </p>
+            </div>
+          </div>
+          <div class="cs-grid__item">
+            <div
+              class="cs-image-container"
+              style="background: #f5f5f5; padding: 1rem; border-radius: 8px"
+            >
+              <img
+                src="./images/final_outcome/nav_hover.png"
+                alt="Navigation hover state"
+                style="width: 100%; border-radius: 4px"
+              />
+              <p
+                class="cs-caption"
+                style="margin-top: 0.5rem; font-style: italic; color: #666"
+              >
+                Interactive navigation
+              </p>
+            </div>
+          </div>
+          <div class="cs-grid__item">
+            <div
+              class="cs-image-container"
+              style="background: #f5f5f5; padding: 1rem; border-radius: 8px"
+            >
+              <img
+                src="./images/final_outcome/contact.png"
+                alt="Contact page"
+                style="width: 100%; border-radius: 4px"
+              />
+              <p
+                class="cs-caption"
+                style="margin-top: 0.5rem; font-style: italic; color: #666"
+              >
+                Contact form and footer
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Key Improvements -->
+        <div
+          class="cs-improvements"
+          style="
+            margin-top: 3rem;
+            background: #f5f5f5;
+            padding: 2rem;
+            border-radius: 8px;
+          "
+        >
+          <h3 class="cs-section__subtitle">Key Improvements</h3>
+          <ul class="cs-improvements__list" style="margin-top: 1rem">
+            <li>
+              <strong>Enhanced Navigation:</strong> Intuitive menu structure
+              with clear pathways to key information
+            </li>
+            <li>
+              <strong>Responsive Design:</strong> Seamless experience across all
+              devices and screen sizes
+            </li>
+            <li>
+              <strong>Accessibility:</strong> WCAG-compliant color contrast,
+              keyboard navigation, and screen reader support
+            </li>
+            <li>
+              <strong>Performance:</strong> Optimized images and assets for fast
+              loading times
+            </li>
+            <li>
+              <strong>User Experience:</strong> Streamlined ordering process and
+              clear calls-to-action
+            </li>
+            <li>
+              <strong>Visual Appeal:</strong> Modern aesthetic that maintains
+              brand recognition
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- How Problems Were Solved Section -->
+    <section id="fulfilled" class="cs-section">
+      <h2 class="cs-section__title">🎯 How Problems Were Solved</h2>
+      <div class="cs-section__text">
+        <p style="font-size: 1.1em; margin-bottom: 2rem">
+          I implemented improvements to address the key issues identified in our
+          analysis:
+        </p>
+
+        <div
+          class="cs-solution"
+          style="background: #f5f5f5; padding: 2rem; border-radius: 8px"
+        >
+          <ul style="list-style-type: none; padding: 0">
+            <li style="margin-bottom: 1.5rem">
+              <strong style="color: #2c3e50">Efficiency:</strong> Redundant
+              elements were eliminated and the navigation streamlined so that
+              essential details like operating hours and location are
+              immediately visible. Unnecessary content was removed to reduce
+              friction.
+            </li>
+            <li style="margin-bottom: 1.5rem">
+              <strong style="color: #2c3e50">Learnability:</strong>
+              Micro-interactions, hover effects, and clear visual cues were
+              introduced. Updated labels and guidance help new users quickly
+              understand how to interact with the site.
+            </li>
+            <li style="margin-bottom: 1.5rem">
+              <strong style="color: #2c3e50">Memorability:</strong> A
+              distinctive color palette and updated typography were adopted. A
+              persistent, intuitive navigation bar ensures returning visitors
+              can easily recognize and recall the brand.
+            </li>
+            <li style="margin-bottom: 1.5rem">
+              <strong style="color: #2c3e50">Conceptual Model:</strong> Content
+              was reorganized to match user expectations. Misleading or static
+              elements were removed to create a logical, intuitive flow
+              throughout the site.
+            </li>
+            <li style="margin-bottom: 1.5rem">
+              <strong style="color: #2c3e50">Accessibility:</strong> Color
+              contrast was improved, descriptive alt text was added, and
+              interactive elements were optimized to meet WCAG guidelines,
+              making the site more inclusive for users with disabilities.
+            </li>
+          </ul>
+
+          <p style="margin-top: 2rem; font-style: italic; color: #666">
+            These enhancements transformed the site into a user-friendly and
+            effective digital experience.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reflections Section -->
+    <section id="reflections" class="cs-section cs-reflection">
+      <h2 class="cs-section__title">💭 Reflections</h2>
+      <div class="cs-section__text">
+        <p style="font-size: 1.1em; margin-bottom: 2rem">
+          This project was a fun exercise that taught me several critical
+          lessons:
+        </p>
+
+        <div
+          class="cs-solution"
+          style="background: #f5f5f5; padding: 2rem; border-radius: 8px"
+        >
+          <ul style="list-style-type: none; padding: 0">
+            <li style="margin-bottom: 1.5rem">
+              <strong style="color: #2c3e50">Attention to Detail:</strong>
+              Subtle choices like precise color contrasts and micro-interactions
+              can make a huge difference.
+            </li>
+            <li style="margin-bottom: 1.5rem">
+              <strong style="color: #2c3e50">User Focused Design:</strong>
+              Aligning design decisions with real user needs and mental models
+              is very important.
+            </li>
+            <li style="margin-bottom: 1.5rem">
+              <strong style="color: #2c3e50"
+                >Balance of Aesthetics and Functionality:</strong
+              >
+              The project highlighted the necessity of creating a visually
+              appealing interface without sacrificing usability or
+              accessibility.
+            </li>
+          </ul>
+
+          <p style="margin-top: 2rem; font-style: italic; color: #666">
+            This was my first site redesign and I enjoyed looking at a site,
+            assessing its strengths and weaknesses, and then fixing it myself!
+          </p>
+
+          <div style="text-align: center; margin-top: 3rem; color: #666">
+            Case Study by Efram Geller
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="cs-footer">
+      <a href="/">← Back to Portfolio</a><br />
+      Case Study Done by Efram Geller
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Warp AI Home - Iterative Design • CSCI1300</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Merriweather:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Back Button -->
+    <div class="cs-back-button">
+      <a href="/">← Back to Projects</a>
+    </div>
+
+    <!-- Hero -->
+    <section class="cs-hero">
+      <div class="cs-hero__content">
+        <p class="cs-hero__meta">CSCI1300: Iterative Design & Evaluation</p>
+        <h1 class="cs-hero__title">Warp AI Home</h1>
+        <p class="cs-hero__meta">
+          Designing a centralized dashboard for a next-gen AI terminal
+        </p>
+        <a href="#sketching" class="cs-hero__cta">See the process ↓</a>
+      </div>
+    </section>
+
+    <!-- Project Info -->
+    <section class="cs-project-info">
+      <div class="cs-project-info__grid">
+        <div class="cs-project-info__item">
+          <h3>Role</h3>
+          <p>UX Designer</p>
+        </div>
+        <div class="cs-project-info__item">
+          <h3>Timeline</h3>
+          <p>4 Weeks</p>
+        </div>
+        <div class="cs-project-info__item">
+          <h3>Team</h3>
+          <p>4 Designers</p>
+        </div>
+        <div class="cs-project-info__item">
+          <h3>Tools</h3>
+          <p>Figma, Balsamiq</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sub-Navigation -->
+    <nav class="cs-subnav">
+      <ul class="cs-subnav__list">
+        <li>
+          <a href="#sketching" class="cs-subnav__link active">Sketching</a>
+        </li>
+        <li><a href="#wireframing" class="cs-subnav__link">Wireframing</a></li>
+        <li>
+          <a href="#critique" class="cs-subnav__link">Wireframe Critique</a>
+        </li>
+        <li>
+          <a href="#prototype" class="cs-subnav__link">Hi-Fi Prototype</a>
+        </li>
+        <li>
+          <a href="#final-critique" class="cs-subnav__link">Final Critique</a>
+        </li>
+        <li><a href="#reflections" class="cs-subnav__link">Reflections</a></li>
+      </ul>
+    </nav>
+
+    <!-- Overview Section -->
+    <section id="sketching" class="cs-section">
+      <h2 class="cs-section__title">Initial Sketches</h2>
+      <div class="cs-section__text">
+        <p>
+          We began our iterative design process by brainstorming and visualizing
+          possible directions for a centralized homepage interface for Warp — a
+          developer-first AI terminal. This dashboard would serve as a hub to
+          manage teams, sessions, recent activity, and AI-powered suggestions,
+          helping users navigate Warp's ecosystem more efficiently.
+        </p>
+        <p>
+          Our goal was to create an interface for desktop users, specifically
+          engineers who use Warp in collaborative environments. These users
+          often struggle to find relevant files, understand team activity, or
+          discover Warp's advanced AI tools. A dashboard could surface these
+          features proactively, reducing friction and cognitive overhead.
+        </p>
+        <p>
+          As a group, we sketched four distinct layout ideas, each exploring
+          different ways to surface core functionalities such as team
+          management, AI suggestions, account settings, and product metrics.
+          Each member contributed three sketches — a home screen and two
+          supporting screens — for a total of 12 unique sketches.
+        </p>
+
+        <div class="cs-sketches-grid">
+          <div class="cs-sketches-group">
+            <h3>Dani's Sketches</h3>
+            <div class="cs-sketches-container">
+              <div class="cs-sketch-item">
+                <img
+                  src="images/sketches/dani1.png"
+                  alt="Dani's first sketch"
+                />
+                <div class="cs-sketch-caption">Home View</div>
+              </div>
+              <div class="cs-sketch-item">
+                <img
+                  src="images/sketches/dani2.png"
+                  alt="Dani's second sketch"
+                />
+                <div class="cs-sketch-caption">Team Management</div>
+              </div>
+              <div class="cs-sketch-item">
+                <img
+                  src="images/sketches/dani3.png"
+                  alt="Dani's third sketch"
+                />
+                <div class="cs-sketch-caption">Activity Feed</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cs-sketches-group">
+            <h3>Mia's Sketches</h3>
+            <div class="cs-sketches-container">
+              <div class="cs-sketch-item">
+                <img src="images/sketches/mia1.png" alt="Mia's first sketch" />
+                <div class="cs-sketch-caption">Dashboard Layout</div>
+              </div>
+              <div class="cs-sketch-item">
+                <img src="images/sketches/mia2.png" alt="Mia's second sketch" />
+                <div class="cs-sketch-caption">Settings Panel</div>
+              </div>
+              <div class="cs-sketch-item">
+                <img src="images/sketches/mia3.png" alt="Mia's third sketch" />
+                <div class="cs-sketch-caption">Metrics View</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cs-sketches-group">
+            <h3>Jake's Sketches</h3>
+            <div class="cs-sketches-container">
+              <div class="cs-sketch-item">
+                <img
+                  src="images/sketches/jake1.png"
+                  alt="Jake's first sketch"
+                />
+                <div class="cs-sketch-caption">Main Interface</div>
+              </div>
+              <div class="cs-sketch-item">
+                <img
+                  src="images/sketches/jake2.png"
+                  alt="Jake's second sketch"
+                />
+                <div class="cs-sketch-caption">Team Overview</div>
+              </div>
+              <div class="cs-sketch-item">
+                <img
+                  src="images/sketches/jake3.png"
+                  alt="Jake's third sketch"
+                />
+                <div class="cs-sketch-caption">Analytics Dashboard</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cs-sketches-group">
+            <h3>Efram's Sketches</h3>
+            <div class="cs-sketches-container">
+              <div class="cs-sketch-item">
+                <img
+                  src="images/sketches/efram1.png"
+                  alt="Efram's first sketch"
+                />
+                <div class="cs-sketch-caption">Home Screen</div>
+              </div>
+              <div class="cs-sketch-item">
+                <img
+                  src="images/sketches/efram2.png"
+                  alt="Efram's second sketch"
+                />
+                <div class="cs-sketch-caption">Team Workspace</div>
+              </div>
+              <div class="cs-sketch-item">
+                <img
+                  src="images/sketches/efram3.png"
+                  alt="Efram's third sketch"
+                />
+                <div class="cs-sketch-caption">Settings View</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="wireframing" class="cs-section">
+      <h2 class="cs-section__title">Wireframe Development</h2>
+      <div class="cs-section__text">
+        <p>
+          After reviewing all sketches, we had a team discussion around what
+          elements worked well and which approaches best aligned with Warp's
+          goals. From that conversation, we created a consolidated wireframe
+          using Balsamiq, combining the strongest parts of our sketches.
+        </p>
+        <p>
+          Key decisions included surfacing team management and metrics in a
+          left-side tab panel, while allowing quick access to AI suggestions and
+          recent activity. This layout prioritized visibility without cluttering
+          the interface.
+        </p>
+        <p>
+          You can view the final wireframes and our walkthrough in the Loom
+          video below.
+        </p>
+
+        <div class="cs-solution">
+          <div class="cs-solution__media">
+            <iframe
+              src="https://www.loom.com/embed/b00de5a5c25d4ad4b480fc7bdd893360?sid=79e680d3-3914-423b-9427-6d1869a01a40"
+              frameborder="0"
+              allowfullscreen
+              style="
+                width: 100%;
+                height: 550px;
+                border-radius: 8px;
+                margin-top: 2rem;
+              "
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="critique" class="cs-section">
+      <h2 class="cs-section__title">Wireframe Critique</h2>
+      <div class="cs-section__text">
+        <p>
+          After submitting our wireframe via Loom, we received detailed feedback
+          from Warp stakeholders and critiqued our work in person with Vanessa
+          Cho. Below is a breakdown of the feedback we received on each section
+          of our design, and the changes we made (or chose not to make) in
+          response.
+        </p>
+
+        <div class="cs-solution">
+          <div class="cs-solution__text">
+            <h3>Home</h3>
+            <div class="cs-highlight">
+              <h4>Feedback</h4>
+              <ul>
+                <li>
+                  Is this dashboard intended to replace WarpDrive? There's
+                  concern it overlaps too much with the Documents section.
+                </li>
+                <li>
+                  The current dropdown may be cramming too many features into
+                  one place.
+                </li>
+                <li>
+                  Why is "Ask Warp" separated from the terminal? It currently
+                  serves as a dual-mode input.
+                </li>
+              </ul>
+              <h4>Our Response</h4>
+              <ul>
+                <li>
+                  We reframed the dashboard as a complementary overview that
+                  enhances WarpDrive, not replaces it.
+                </li>
+                <li>
+                  We surfaced persona-based functionality directly on the
+                  dashboard.
+                </li>
+                <li>
+                  "Ask Warp" will be integrated with the terminal input to align
+                  with current user expectations.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="cs-solution">
+          <div class="cs-solution__text">
+            <h3>Team</h3>
+            <div class="cs-highlight">
+              <h4>Feedback</h4>
+              <ul>
+                <li>
+                  The IA could use more thoughtful grouping—look at Figma's
+                  org/project hierarchy.
+                </li>
+                <li>
+                  Make assumptions clear (e.g., users belong to teams, not just
+                  projects).
+                </li>
+              </ul>
+              <h4>Our Response</h4>
+              <ul>
+                <li>
+                  We adopted a clear structure where users belong to teams, and
+                  teams manage multiple workspaces.
+                </li>
+                <li>
+                  We simplified navigation and made team-level views more
+                  consistent.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="cs-solution">
+          <div class="cs-solution__text">
+            <h3>Metrics & Billing</h3>
+            <div class="cs-highlight">
+              <h4>Feedback</h4>
+              <ul>
+                <li>
+                  Tailor metrics to specific user types — e.g., admins care
+                  about performance stats.
+                </li>
+                <li>
+                  The pricing tiers are too prominent — not reflective of what
+                  users actually come to view.
+                </li>
+              </ul>
+              <h4>Our Response</h4>
+              <ul>
+                <li>
+                  We proposed usage-based metrics: frequency of AI suggestions,
+                  time saved, etc.
+                </li>
+                <li>
+                  We demoted pricing tiers to a secondary page and prioritized
+                  recent invoices and usage breakdowns.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="cs-solution">
+          <div class="cs-solution__text">
+            <h3>Final Thoughts</h3>
+            <p>
+              Our in-person critique with Vanessa reinforced many of the same
+              points, helping us prioritize which adjustments to make first.
+              Across the board, we focused on simplifying navigation, clarifying
+              hierarchy, and surfacing key functionality in the most
+              context-appropriate places.
+            </p>
+            <p class="cs-quote">
+              How do we create a landing experience that's helpful to new users,
+              but doesn't overwhelm them with complexity?
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="prototype" class="cs-section">
+      <h2 class="cs-section__title">Hi-Fi Prototype</h2>
+      <div class="cs-section__text">
+        <p>
+          Building on the wireframes and stakeholder critique, we crafted a
+          Hi-Fi Figma prototype that looks, feels, and navigates like finished
+          Warp Home.
+        </p>
+
+        <div class="cs-solution">
+          <div class="cs-solution__text">
+            <h3>Key Features & Improvements</h3>
+            <ul>
+              <li>
+                <strong>Home Dashboard:</strong> Integrated "Getting Started"
+                card for new users, Updates panel for recent changes, and
+                horizontally-scrollable Recent Activity carousel.
+              </li>
+              <li>
+                <strong>Teams View:</strong> Inspired by Figma's layout with
+                top-level team tiles showing member count and activity. Team
+                selection reveals templates and files.
+              </li>
+              <li>
+                <strong>Billing:</strong> Streamlined layout with current plan,
+                seat management, and clear invoices without aggressive
+                upselling.
+              </li>
+              <li>
+                <strong>Metrics:</strong> Focused on ROI with AI usage rate,
+                time saved estimates, and team performance metrics.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cs-solution">
+          <div class="cs-solution__text">
+            <h3>Key Feedback Incorporated</h3>
+            <ul>
+              <li>
+                Moved onboarding tips to clear view instead of hiding in tabs
+              </li>
+              <li>
+                Maintained Warp Drive as permanent feature with toggleable
+                sidebar
+              </li>
+              <li>Implemented Figma-style Teams → Members → Files hierarchy</li>
+              <li>Simplified billing interface focused on current usage</li>
+              <li>Emphasized developer-centric metrics over internal KPIs</li>
+            </ul>
+          </div>
+        </div>
+
+        <p>View our interactive prototype:</p>
+
+        <div class="cs-solution">
+          <div class="cs-solution__media">
+            <iframe
+              src="https://www.loom.com/embed/27d983c61b4945af92e68bf9d468e08b"
+              frameborder="0"
+              allowfullscreen
+              style="
+                width: 100%;
+                height: 550px;
+                border-radius: 8px;
+                margin-top: 2rem;
+              "
+            ></iframe>
+          </div>
+        </div>
+
+        <div class="cs-solution">
+          <div class="cs-solution__media">
+            <iframe
+              src="https://embed.figma.com/proto/Z858FJzyUojk4x38pRcJ9n/Warp-AI-Home--Hi-Fi-Prototype?page-id=0%3A1&node-id=55-3485&starting-point-node-id=55%3A3485&embed-host=share"
+              frameborder="0"
+              allowfullscreen
+              style="
+                width: 100%;
+                height: 550px;
+                border-radius: 8px;
+                margin-top: 2rem;
+              "
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="final-critique" class="cs-section">
+      <h2 class="cs-section__title">Final Critique</h2>
+      <div class="cs-section__text">
+        <p>
+          After submitting our Hi-Fi prototype, we had the privilege to meet
+          with two developers on the Warp team. This in-person critique provided
+          valuable feedback and insights for future iterations.
+        </p>
+
+        <div class="cs-solution">
+          <div class="cs-solution__text">
+            <h3>Home & Navigation</h3>
+            <div class="cs-highlight">
+              <h4>Feedback</h4>
+              <ul>
+                <li>
+                  Two toggling side panels (Settings/Drive) is potentially
+                  confusing
+                </li>
+                <li>Single-page approach might lead to cluttered experience</li>
+                <li>Terminal should be the primary landing point</li>
+              </ul>
+              <h4>Our Response</h4>
+              <ul>
+                <li>Consider making home view an optional, accessible tab</li>
+                <li>Streamline navigation into unified side menu</li>
+                <li>Design progressive disclosure for new users</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="cs-solution">
+          <div class="cs-solution__text">
+            <h3>Teams & Permissions</h3>
+            <div class="cs-highlight">
+              <h4>Feedback</h4>
+              <ul>
+                <li>Member management needs dedicated space</li>
+                <li>Permissions system requires clear presentation</li>
+              </ul>
+              <h4>Our Response</h4>
+              <ul>
+                <li>Create focused Members tab with clear controls</li>
+                <li>Keep preview components lightweight</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="cs-solution">
+          <div class="cs-solution__text">
+            <h3>Metrics & Customization</h3>
+            <div class="cs-highlight">
+              <h4>Feedback</h4>
+              <ul>
+                <li>Separate individual and team metrics</li>
+                <li>Focus on developer-relevant data</li>
+                <li>Users want customization options</li>
+              </ul>
+              <h4>Our Response</h4>
+              <ul>
+                <li>Create distinct sections for different metric types</li>
+                <li>Prioritize actionable developer insights</li>
+                <li>Explore widget-based customization</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reflection Section -->
+    <section id="reflections" class="cs-section">
+      <h2 class="cs-section__title">Reflections</h2>
+      <div class="cs-reflection">
+        <h3>Key Learnings</h3>
+        <ul class="cs-reflection__list">
+          <li>
+            The importance of contextual onboarding over overwhelming initial
+            tutorials
+          </li>
+          <li>
+            Balancing power user needs with intuitive navigation for new users
+          </li>
+          <li>
+            Using metrics and analytics to drive feature adoption and team
+            collaboration
+          </li>
+          <li>The value of iterative feedback in shaping product direction</li>
+        </ul>
+
+        <div class="cs-highlight">
+          <h3>Future Considerations</h3>
+          <ul>
+            <li>Exploring more contextual design strategies</li>
+            <li>Developing progressive disclosure patterns</li>
+            <li>Balancing customization with consistency</li>
+          </ul>
+        </div>
+
+        <p class="cs-section__text">
+          "How can we balance first-time user guidance with the expectations of
+          a power user who just wants to get coding?"
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="cs-footer">
+      <p>
+        Designed with care by the CSCI1300 team. View more
+        <a href="/#projects">projects</a>.
+      </p>
+    </footer>
+  </body>
+</html>
