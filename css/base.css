@@ -168,9 +168,12 @@ a {
 
 .hero-avatar {
   position: relative;
+  display: flex;
+  justify-content: center;
+
   z-index: 3;
-  width: 120px;
-  height: 120px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   margin-bottom: 2rem;
   border: 3px solid var(--clr-accent);
