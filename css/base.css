@@ -148,17 +148,34 @@ a {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url("../assets/img/play1.png") center/contain no-repeat;
-  opacity: 0.1;
-  z-index: 1;
+  background: url("../assets/images/play1.png") top left no-repeat,
+    url("../assets/images/play2.png") center no-repeat,
+    url("../assets/images/play3.png") bottom right no-repeat;
+  background-size: 20% auto, 25% auto, 20% auto;
+  opacity: 0.07;
   pointer-events: none;
+  z-index: 1;
 }
 
 .hero-content {
-  max-width: var(--content-max);
+  max-width: 800px;
   margin: 0 auto;
-  position: relative;
-  z-index: 2;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+  border: 3px solid var(--accent-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.hero-avatar:hover {
+  transform: scale(1.05);
 }
 
 .tagline {
@@ -652,4 +669,16 @@ a,
 
 a:hover {
   color: var(--clr-accent);
+}
+
+/* Scroll Reveal Animation */
+.pre-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.pre-reveal.reveal {
+  opacity: 1;
+  transform: translateY(0);
 }

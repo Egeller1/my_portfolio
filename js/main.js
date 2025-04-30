@@ -276,3 +276,23 @@ document.querySelectorAll(".timeline").forEach((tl) => {
   );
   observer.observe(tl);
 });
+
+// Scroll Reveal Animation
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".card");
+  cards.forEach((card) => card.classList.add("pre-reveal"));
+
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("reveal");
+          obs.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  cards.forEach((card) => observer.observe(card));
+});
