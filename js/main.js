@@ -30,7 +30,7 @@ function startCounter() {
   let n = 0,
     target = 100;
   const accentColor = "#ff3b30";
-  const finalColor = "#fff0ef";
+  const finalColor = "#09ff00";
 
   const int = setInterval(() => {
     if (metricEl) {
