@@ -152,7 +152,7 @@ a {
     url("../assets/img/play2.png") center right no-repeat,
     url("../assets/img/play3.png") bottom center no-repeat;
   background-size: 20% auto, 25% auto, 20% auto;
-  opacity: 0.07;
+  opacity: 0.47;
   pointer-events: none;
   z-index: 1;
 }
@@ -262,6 +262,12 @@ a {
 /* ---------- Sections ---------- */
 .pad {
   background: #ffffff;
+  background: url("../assets/img/play1.png") top left no-repeat,
+    url("../assets/img/play2.png") center right no-repeat,
+    url("../assets/img/play3.png") bottom center no-repeat;
+  background-size: 40% auto, 40% auto, 40% auto;
+  opacity: 0.7;
+
   padding: 4rem 2rem;
   border-top: 1px solid #e0e0e0;
 }
@@ -275,13 +281,6 @@ a {
 section {
   position: relative;
   z-index: 1;
-}
-
-/* Remove any play diagram backgrounds */
-#featured::before,
-#sports::before,
-#design::before {
-  display: none;
 }
 
 .section-intro {
