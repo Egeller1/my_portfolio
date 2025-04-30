@@ -1,0 +1,449 @@
+/* — Design System — */
+:root {
+  --color-text: #333333;
+  --color-bg: #ffffff;
+  --color-primary: #ff3b3f;
+  --color-secondary: #ffcb47;
+  --color-muted: #f5f5f5;
+  --font-sans: "Inter", sans-serif;
+  --font-serif: "Merriweather", serif;
+  --fs-xl: clamp(3.5rem, 6vw, 5rem);
+  --fs-lg: clamp(2rem, 4vw, 3rem);
+  --fs-md: clamp(1.125rem, 2vw, 1.5rem);
+  --fs-body: 1.125rem;
+  --space-sm: 1.5rem;
+  --space-md: 3rem;
+  --space-lg: 6rem;
+  --page-margin: max(2rem, calc((100vw - 1800px) / 2));
+  --content-width: min(1800px, 100vw - 4rem);
+  --ease: ease-out;
+  --dur: 0.5s;
+}
+
+/* — Base — */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: var(--font-serif);
+  color: var(--color-text);
+}
+
+p {
+  margin: var(--space-sm) 0;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--dur) var(--ease);
+}
+
+a:hover {
+  color: #000;
+}
+
+/* — Back Button — */
+.cs-back-button {
+  position: fixed;
+  top: 2rem;
+  left: var(--page-margin);
+  z-index: 100;
+}
+
+.cs-back-button a {
+  color: var(--color-text);
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.cs-back-button a:hover {
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* — Hero — */
+.cs-hero {
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 var(--page-margin);
+  position: relative;
+  background: var(--color-bg);
+}
+
+.cs-hero__content {
+  width: 100%;
+  max-width: var(--content-width);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cs-hero__title {
+  font-size: var(--fs-xl);
+  font-weight: 700;
+  margin: 0 0 1.5rem 0;
+  color: var(--color-text);
+  line-height: 1.2;
+}
+
+.cs-hero__author {
+  font-size: var(--fs-md);
+  color: #555;
+  margin: 1rem 0;
+}
+
+.cs-hero__meta {
+  font-size: var(--fs-md);
+  color: #555;
+  margin: 1rem 0;
+}
+
+.cs-hero__cta {
+  display: inline-block;
+  margin-top: var(--space-md);
+  padding: 0.75em 1.5em;
+  border: 2px solid var(--color-primary);
+  border-radius: 4px;
+  color: var(--color-primary);
+  font-weight: 500;
+  transition: background var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+
+.cs-hero__cta:hover {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+/* Hero Links */
+.cs-hero__links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.cs-hero__author-link {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.cs-hero__author-link:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* CTA Buttons */
+.cs-cta-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.cs-button--secondary {
+  background: transparent;
+  border: 2px solid #2c3e50;
+  color: #2c3e50;
+}
+
+.cs-button--secondary:hover {
+  background: #2c3e50;
+  color: #fff;
+}
+
+/* — Project Info — */
+.cs-project-info {
+  width: 100%;
+  padding: 2rem var(--page-margin) var(--space-lg);
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-muted);
+  margin-top: -2rem;
+}
+
+.cs-project-info__grid {
+  width: 100%;
+  max-width: var(--content-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-lg);
+}
+
+.cs-project-info__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cs-project-info__item h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #666;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cs-project-info__item p {
+  font-size: var(--fs-body);
+  color: var(--color-text);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* — Sub Navigation — */
+.cs-subnav {
+  width: 100%;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-muted);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 0 var(--page-margin);
+}
+
+.cs-subnav__list {
+  width: 100%;
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  gap: var(--space-md);
+  list-style: none;
+  overflow-x: auto;
+  height: 60px;
+  align-items: center;
+}
+
+.cs-subnav__link {
+  font-size: var(--fs-body);
+  padding: 1.25rem 0;
+  position: relative;
+  color: var(--color-text);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.cs-subnav__link.active {
+  color: var(--color-primary);
+}
+
+.cs-subnav__link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--color-primary);
+}
+
+/* — Sections — */
+.cs-section {
+  width: 100%;
+  padding: var(--space-lg) var(--page-margin);
+  margin: 0 auto;
+}
+
+.cs-section > * {
+  width: 100%;
+  max-width: var(--content-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cs-section__title {
+  font-size: var(--fs-lg);
+  margin-bottom: var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.cs-section__text {
+  max-width: 100%;
+  font-size: var(--fs-body);
+  color: #444;
+  margin-bottom: var(--space-md);
+}
+
+.cs-section h3 {
+  font-size: 1.5rem;
+  margin: 2rem 0 1rem;
+  color: var(--color-text);
+}
+
+.cs-section ul {
+  width: 100%;
+  padding-left: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.cs-section li {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* — Context Section — */
+.cs-section--context {
+  display: grid;
+  grid-template-columns: minmax(0, 2.5fr) minmax(0, 1fr);
+  gap: var(--space-lg);
+  align-items: start;
+}
+
+.cs-highlight {
+  background: var(--color-secondary);
+  padding: var(--space-md);
+  border-radius: 1rem;
+  font-size: var(--fs-md);
+  height: fit-content;
+}
+
+/* — Solution — */
+.cs-solution {
+  display: flex;
+  gap: var(--space-lg);
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.cs-solution__text {
+  flex: 1 1 300px;
+}
+
+.cs-solution__media {
+  flex: 1 1 300px;
+}
+
+/* — Reflection — */
+.cs-reflection {
+  background: var(--color-muted);
+  border-radius: 2rem;
+  padding: var(--space-lg);
+  margin-top: var(--space-lg);
+}
+
+/* — Footer — */
+.cs-footer {
+  width: 100%;
+  padding: var(--space-md) var(--page-margin);
+  text-align: center;
+  font-size: 0.875rem;
+  color: #777;
+  background: var(--color-muted);
+}
+
+/* Footer */
+.cs-footer__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.cs-footer__link {
+  color: #2c3e50;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.cs-footer__link:hover {
+  color: #3498db;
+}
+
+/* — Responsive Design — */
+@media (max-width: 1200px) {
+  :root {
+    --page-margin: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .cs-section--context {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-project-info__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+
+  .cs-hero__title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cs-project-info__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
+}
+
+/* Image Grid */
+.cs-image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.cs-image-item {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.cs-image-item:hover {
+  transform: translateY(-5px);
+}
+
+.cs-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.cs-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  color: white;
+  margin: 0;
+  font-size: 0.9rem;
+}

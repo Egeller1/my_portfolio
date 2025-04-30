@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Photoshop Visual Explorations • Efram Geller</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Merriweather:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Modal -->
+    <div id="imageModal" class="cs-modal">
+      <span class="cs-modal__close">&times;</span>
+      <img class="cs-modal__content" id="modalImage" />
+      <div id="modalCaption" class="cs-modal__caption"></div>
+    </div>
+
+    <!-- Back Button -->
+    <div class="cs-back-button">
+      <a href="/">← Back to Portfolio</a>
+    </div>
+
+    <!-- Hero -->
+    <section class="cs-hero">
+      <div class="cs-hero__overlay"></div>
+      <div class="cs-hero__content">
+        <h1 class="cs-hero__title">Photoshop Visual Explorations</h1>
+        <p class="cs-hero__meta">
+          A collection of creative experiments and visual designs
+        </p>
+        <a href="#gallery" class="cs-hero__cta">Explore Gallery ↓</a>
+      </div>
+    </section>
+
+    <!-- Project Info -->
+    <section class="cs-project-info">
+      <div class="cs-project-info__grid">
+        <div class="cs-project-info__item">
+          <h3>Category</h3>
+          <p>Visual Design</p>
+        </div>
+        <div class="cs-project-info__item">
+          <h3>Tools</h3>
+          <p>Adobe Photoshop</p>
+        </div>
+        <div class="cs-project-info__item">
+          <h3>Year</h3>
+          <p>2024</p>
+        </div>
+        <div class="cs-project-info__item">
+          <h3>Type</h3>
+          <p>Personal Project</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sub-Navigation -->
+    <nav class="cs-subnav">
+      <ul class="cs-subnav__list">
+        <li>
+          <a href="#general" class="cs-subnav__link active">General Design</a>
+        </li>
+        <li><a href="#music" class="cs-subnav__link">Music</a></li>
+        <li><a href="#sports" class="cs-subnav__link">Sports</a></li>
+      </ul>
+    </nav>
+
+    <!-- Gallery Sections -->
+    <section id="gallery" class="cs-section">
+      <!-- General Design Section -->
+      <div id="general" class="cs-gallery-section">
+        <h2 class="cs-section__title">General Design</h2>
+        <div class="cs-gallery-grid">
+          <!-- Fire Hands -->
+          <div class="cs-gallery-item">
+            <div class="cs-gallery-item__image" onclick="openModal(this)">
+              <img src="images/general/fire_hands.png" alt="Fire Hands" />
+            </div>
+            <p class="cs-gallery-item__caption">Fire Hands</p>
+            <p class="cs-gallery-item__description">
+              Hands emerging from flames with dynamic effects.
+            </p>
+          </div>
+          <!-- Frost Hands -->
+          <div class="cs-gallery-item">
+            <div class="cs-gallery-item__image" onclick="openModal(this)">
+              <img src="images/general/frost_hands.pdf" alt="Frost Hands" />
+            </div>
+            <p class="cs-gallery-item__caption">Frost Hands</p>
+            <p class="cs-gallery-item__description">
+              Ethereal hands emerging from a frosty portal.
+            </p>
+          </div>
+          <!-- Cloud Portal -->
+          <div class="cs-gallery-item">
+            <div class="cs-gallery-item__image" onclick="openModal(this)">
+              <img src="images/general/cloud_portal.pdf" alt="Cloud Portal" />
+            </div>
+            <p class="cs-gallery-item__caption">Cloud Portal</p>
+            <p class="cs-gallery-item__description">
+              A mystical portal emerging from clouds.
+            </p>
+          </div>
+          <!-- Square Earth -->
+          <div class="cs-gallery-item">
+            <div class="cs-gallery-item__image" onclick="openModal(this)">
+              <img src="images/general/square_earth.pdf" alt="Square Earth" />
+            </div>
+            <p class="cs-gallery-item__caption">Square Earth</p>
+            <p class="cs-gallery-item__description">
+              A geometric interpretation of our planet.
+            </p>
+          </div>
+          <!-- Galaxy Biker -->
+          <div class="cs-gallery-item">
+            <div class="cs-gallery-item__image" onclick="openModal(this)">
+              <img src="images/general/galaxy_biker.pdf" alt="Galaxy Biker" />
+            </div>
+            <p class="cs-gallery-item__caption">Galaxy Biker</p>
+            <p class="cs-gallery-item__description">
+              A cosmic motorcycle rider emerging from a galaxy portal.
+            </p>
+          </div>
+          <!-- Face Slice -->
+          <div class="cs-gallery-item">
+            <div class="cs-gallery-item__image" onclick="openModal(this)">
+              <img src="images/general/face_slice.pdf" alt="Face Slice" />
+            </div>
+            <p class="cs-gallery-item__caption">Face Slice</p>
+            <p class="cs-gallery-item__description">
+              A surreal portrait with geometric elements.
+            </p>
+          </div>
+          <!-- Cat Eyes -->
+          <div class="cs-gallery-item">
+            <div class="cs-gallery-item__image" onclick="openModal(this)">
+              <img src="images/general/cat_eyes.png" alt="Cat Eyes" />
+            </div>
+            <p class="cs-gallery-item__caption">Cat Eyes</p>
+            <p class="cs-gallery-item__description">
+              Hypnotic cat eyes with ethereal effects.
+            </p>
+          </div>
+          <!-- Globe Earth -->
+          <div class="cs-gallery-item">
+            <div class="cs-gallery-item__image" onclick="openModal(this)">
+              <img src="images/general/globe_earth.pdf" alt="Globe Earth" />
+            </div>
+            <p class="cs-gallery-item__caption">Globe Earth</p>
+            <p class="cs-gallery-item__description">
+              A stylized globe with dynamic lighting effects.
+            </p>
+          </div>
+          <!-- Econ Mag Front -->
+          <div class="cs-gallery-item">
+            <div class="cs-gallery-item__image" onclick="openModal(this)">
+              <img
+                src="images/general/econ_mag_front.png"
+                alt="Economics Magazine Front"
+              />
+            </div>
+            <p class="cs-gallery-item__caption">Economics Magazine Front</p>
+            <p class="cs-gallery-item__description">
+              Front cover design for an economics publication.
+            </p>
+          </div>
+          <!-- Econ Mag Back -->
+          <div class="cs-gallery-item">
+            <div class="cs-gallery-item__image" onclick="openModal(this)">
+              <img
+                src="images/general/econ_mag_back.png"
+                alt="Economics Magazine Back"
+              />
+            </div>
+            <p class="cs-gallery-item__caption">Economics Magazine Back</p>
+            <p class="cs-gallery-item__description">
+              Back cover design for an economics publication.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Music Section -->
+      <div id="music" class="cs-gallery-section">
+        <h2 class="cs-section__title">Music</h2>
+        <div class="cs-gallery-grid">
+          <!-- Mac Miller -->
+          <div class="cs-gallery-item">
+            <div class="cs-gallery-item__image" onclick="openModal(this)">
+              <img src="images/music/mac_miller.pdf" alt="Mac Miller" />
+            </div>
+            <p class="cs-gallery-item__caption">Mac Miller</p>
+            <p class="cs-gallery-item__description">
+              A tribute piece to the late rapper Mac Miller.
+            </p>
+          </div>
+          <!-- Kanye Coin -->
+          <div class="cs-gallery-item">
+            <div class="cs-gallery-item__image" onclick="openModal(this)">
+              <img src="images/music/kanye_coin.png" alt="Kanye Coin" />
+            </div>
+            <p class="cs-gallery-item__caption">Kanye Coin</p>
+            <p class="cs-gallery-item__description">
+              A conceptual cryptocurrency design featuring Kanye West.
+            </p>
+          </div>
+          <!-- Kanye Edit -->
+          <div class="cs-gallery-item">
+            <div class="cs-gallery-item__image" onclick="openModal(this)">
+              <img src="images/music/kanye_edit.pdf" alt="Kanye Edit" />
+            </div>
+            <p class="cs-gallery-item__caption">Kanye Edit</p>
+            <p class="cs-gallery-item__description">
+              A creative reimagining of Kanye West's visual style.
+            </p>
+          </div>
+          <!-- Cudi Text -->
+          <div class="cs-gallery-item">
+            <div class="cs-gallery-item__image" onclick="openModal(this)">
+              <img src="images/music/cudi_text.pdf" alt="Cudi Text" />
+            </div>
+            <p class="cs-gallery-item__caption">Cudi Text</p>
+            <p class="cs-gallery-item__description">
+              Typography experiment inspired by Kid Cudi.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sports Section -->
+      <div id="sports" class="cs-gallery-section">
+        <h2 class="cs-section__title">Sports</h2>
+        <div class="cs-gallery-grid">
+          <!-- Darnell Washington -->
+          <div class="cs-gallery-item">
+            <div class="cs-gallery-item__image" onclick="openModal(this)">
+              <img
+                src="images/sports/darnell_washington.pdf"
+                alt="Darnell Washington"
+              />
+            </div>
+            <p class="cs-gallery-item__caption">Darnell Washington</p>
+            <p class="cs-gallery-item__description">
+              A powerful design featuring the Steelers tight end.
+            </p>
+          </div>
+          <!-- Lakers Gameday -->
+          <div class="cs-gallery-item">
+            <div class="cs-gallery-item__image" onclick="openModal(this)">
+              <img
+                src="images/sports/lakers_gameday.png"
+                alt="Lakers Gameday"
+              />
+            </div>
+            <p class="cs-gallery-item__caption">Lakers Gameday</p>
+            <p class="cs-gallery-item__description">
+              Dynamic gameday graphic for the Los Angeles Lakers.
+            </p>
+          </div>
+          <!-- Lakers Sticker -->
+          <div class="cs-gallery-item">
+            <div class="cs-gallery-item__image" onclick="openModal(this)">
+              <img
+                src="images/sports/lakers_sticker.pdf"
+                alt="Lakers Sticker"
+              />
+            </div>
+            <p class="cs-gallery-item__caption">Lakers Sticker</p>
+            <p class="cs-gallery-item__description">
+              A sticker design for the Los Angeles Lakers.
+            </p>
+          </div>
+          <!-- Najee Gameday -->
+          <div class="cs-gallery-item">
+            <div class="cs-gallery-item__image" onclick="openModal(this)">
+              <img src="images/sports/najee_gameday.pdf" alt="Najee Gameday" />
+            </div>
+            <p class="cs-gallery-item__caption">Najee Gameday</p>
+            <p class="cs-gallery-item__description">
+              Gameday graphic for Steelers running back Najee Harris.
+            </p>
+          </div>
+          <!-- Trevor Lawrence -->
+          <div class="cs-gallery-item">
+            <div class="cs-gallery-item__image" onclick="openModal(this)">
+              <img src="images/sports/TLAW.pdf" alt="Trevor Lawrence" />
+            </div>
+            <p class="cs-gallery-item__caption">Trevor Lawrence</p>
+            <p class="cs-gallery-item__description">
+              A bold portrait of the Jacksonville Jaguars quarterback.
+            </p>
+          </div>
+          <!-- Bijan -->
+          <div class="cs-gallery-item">
+            <div class="cs-gallery-item__image" onclick="openModal(this)">
+              <img src="images/sports/bijan.pdf" alt="Bijan" />
+            </div>
+            <p class="cs-gallery-item__caption">Bijan</p>
+            <p class="cs-gallery-item__description">
+              A dynamic design featuring the rising star running back.
+            </p>
+          </div>
+          <!-- Justin Fields -->
+          <div class="cs-gallery-item">
+            <div class="cs-gallery-item__image" onclick="openModal(this)">
+              <img src="images/sports/justin_fields.pdf" alt="Justin Fields" />
+            </div>
+            <p class="cs-gallery-item__caption">Justin Fields</p>
+            <p class="cs-gallery-item__description">
+              A striking portrait of the Chicago Bears quarterback.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Closing Text -->
+    <section class="cs-section cs-reflection">
+      <div class="cs-section__text">
+        <p>
+          These visual explorations represent my journey in mastering
+          Photoshop's capabilities and pushing the boundaries of digital design.
+          Each piece was created with a focus on composition, color theory, and
+          visual storytelling, demonstrating the power of digital tools in
+          creating compelling imagery.
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="cs-footer">
+      <a href="/">← Back to Portfolio</a><br />
+      Visual Explorations by Efram Geller
+    </footer>
+
+    <!-- Modal Script -->
+    <script>
+      // Get the modal
+      const modal = document.getElementById("imageModal");
+      const modalImg = document.getElementById("modalImage");
+      const captionText = document.getElementById("modalCaption");
+      const closeBtn = document.getElementsByClassName("cs-modal__close")[0];
+
+      // Open modal
+      function openModal(element) {
+        const img = element.querySelector("img");
+        modal.style.display = "flex";
+        modalImg.src = img.src;
+        captionText.innerHTML = img.alt;
+      }
+
+      // Close modal when clicking the close button
+      closeBtn.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      // Close modal when clicking outside the image
+      modal.onclick = function (event) {
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      };
+
+      // Close modal with escape key
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+          modal.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>

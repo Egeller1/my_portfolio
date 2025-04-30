@@ -1,0 +1,706 @@
+/* — Design System — */
+:root {
+  --color-text: #333333;
+  --color-bg: #ffffff;
+  --color-primary: #2ecc71;
+  --color-secondary: #27ae60;
+  --color-muted: #f5f5f5;
+  --font-sans: "Inter", sans-serif;
+  --font-serif: "Merriweather", serif;
+  --fs-xl: clamp(3.5rem, 6vw, 5rem);
+  --fs-lg: clamp(2rem, 4vw, 3rem);
+  --fs-md: clamp(1.125rem, 2vw, 1.5rem);
+  --fs-body: 1.125rem;
+  --space-sm: 1.5rem;
+  --space-md: 3rem;
+  --space-lg: 6rem;
+  --page-margin: max(2rem, calc((100vw - 1800px) / 2));
+  --content-width: min(1800px, 100vw - 4rem);
+  --ease: ease-out;
+  --dur: 0.5s;
+  --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --card-radius: 12px;
+}
+
+/* — Base — */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: var(--font-serif);
+  color: var(--color-text);
+}
+
+p {
+  margin: var(--space-sm) 0;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--dur) var(--ease);
+}
+
+a:hover {
+  color: #000;
+}
+
+/* — Back Button — */
+.cs-back-button {
+  position: fixed;
+  top: 2rem;
+  left: var(--page-margin);
+  z-index: 100;
+}
+
+.cs-back-button a {
+  color: var(--color-text);
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.cs-back-button a:hover {
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* — Hero — */
+.cs-hero {
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 var(--page-margin);
+  position: relative;
+  background: linear-gradient(135deg, #2ecc71 0%, #1a1a1a 100%);
+  color: white;
+}
+
+.cs-hero__content {
+  width: 100%;
+  max-width: var(--content-width);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cs-hero__logo {
+  margin-bottom: 2rem;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: white;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform var(--dur) var(--ease);
+}
+
+.cs-hero__logo:hover {
+  transform: scale(1.05);
+}
+
+.cs-hero__logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.cs-hero__title {
+  font-size: var(--fs-xl);
+  font-weight: 700;
+  margin: 0 0 1.5rem 0;
+  color: white;
+  line-height: 1.2;
+}
+
+.cs-hero__author,
+.cs-hero__meta {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.cs-hero__cta {
+  display: inline-block;
+  margin-top: var(--space-md);
+  padding: 0.75em 1.5em;
+  border: 2px solid white;
+  border-radius: 4px;
+  color: white;
+  font-weight: 500;
+  transition: background var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+
+.cs-hero__cta:hover {
+  background: white;
+  color: var(--color-primary);
+}
+
+.cs-hero__subtitle {
+  font-size: var(--fs-md);
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 2rem 0;
+  font-weight: 500;
+}
+
+.cs-hero__badges {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cs-hero__badge {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+  color: white;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* — Project Info — */
+.cs-project-info {
+  width: 100%;
+  padding: 2rem var(--page-margin) var(--space-lg);
+  background: white;
+  border-bottom: 1px solid var(--color-muted);
+  margin-top: -2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cs-project-info__grid {
+  width: 100%;
+  max-width: var(--content-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-lg);
+}
+
+.cs-project-info__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cs-project-info__item h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #666;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cs-project-info__item p {
+  font-size: var(--fs-body);
+  color: var(--color-text);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* — Sub Navigation — */
+.cs-subnav {
+  width: 100%;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-muted);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 0 var(--page-margin);
+}
+
+.cs-subnav__list {
+  width: 100%;
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  gap: var(--space-md);
+  list-style: none;
+  overflow-x: auto;
+  height: 60px;
+  align-items: center;
+}
+
+.cs-subnav__link {
+  font-size: var(--fs-body);
+  padding: 1.25rem 0;
+  position: relative;
+  color: var(--color-text);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.cs-subnav__link.active {
+  color: var(--color-primary);
+}
+
+.cs-subnav__link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--color-primary);
+}
+
+/* — Sections — */
+.cs-section {
+  width: 100%;
+  padding: var(--space-lg) var(--page-margin);
+  margin: 0 auto;
+  background: white;
+}
+
+.cs-section > * {
+  width: 100%;
+  max-width: var(--content-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cs-section__title {
+  font-size: var(--fs-lg);
+  margin-bottom: var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  color: var(--color-primary);
+}
+
+.cs-section__text {
+  max-width: 100%;
+  font-size: var(--fs-body);
+  color: #444;
+  margin-bottom: var(--space-md);
+}
+
+.cs-section h3 {
+  font-size: 1.5rem;
+  margin: 2rem 0 1rem;
+  color: var(--color-text);
+}
+
+.cs-section ul {
+  width: 100%;
+  padding-left: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.cs-section li {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* — Context Section — */
+.cs-section--context {
+  display: grid;
+  grid-template-columns: minmax(0, 2.5fr) minmax(0, 1fr);
+  gap: var(--space-lg);
+  align-items: start;
+}
+
+.cs-highlight {
+  background: var(--color-muted);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  font-size: var(--fs-md);
+  height: fit-content;
+  border-left: 4px solid var(--color-primary);
+  margin: 2rem 0;
+}
+
+/* — Solution — */
+.cs-solution {
+  display: flex;
+  gap: var(--space-lg);
+  align-items: flex-start;
+  flex-wrap: wrap;
+  background: var(--color-muted);
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+}
+
+.cs-solution__text {
+  flex: 1 1 300px;
+}
+
+.cs-solution__text h3 {
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.cs-solution__media {
+  flex: 1 1 300px;
+}
+
+.cs-solution ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cs-solution li {
+  margin-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.cs-solution li::before {
+  content: "•";
+  color: var(--color-primary);
+  position: absolute;
+  left: 0;
+}
+
+/* — Reflection — */
+.cs-reflection {
+  background: var(--color-muted);
+  border-radius: 2rem;
+  padding: var(--space-lg);
+  margin-top: var(--space-lg);
+}
+
+/* — Footer — */
+.cs-footer {
+  width: 100%;
+  padding: var(--space-md) var(--page-margin);
+  text-align: center;
+  font-size: 0.875rem;
+  color: #777;
+  background: var(--color-muted);
+}
+
+/* — Package Details — */
+.cs-package-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-md);
+  margin: var(--space-md) 0;
+}
+
+.cs-package-card {
+  background: white;
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+  transition: transform var(--dur) var(--ease),
+    box-shadow var(--dur) var(--ease);
+}
+
+.cs-package-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cs-package-card__header {
+  background: var(--color-primary);
+  color: white;
+  padding: 1.5rem;
+}
+
+.cs-package-card__header h3 {
+  color: white;
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.cs-package-card__content {
+  padding: 1.5rem;
+}
+
+.cs-package-card__content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cs-package-card__content li {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--color-muted);
+}
+
+.cs-package-card__content li:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.cs-package-card__content strong {
+  display: block;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.cs-package-card__content p {
+  margin: 0.5rem 0;
+  color: var(--color-text);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.cs-package-card__example {
+  display: block;
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  background: var(--color-muted);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+}
+
+/* — Visual Elements — */
+.cs-visual {
+  margin: var(--space-md) 0;
+  text-align: center;
+}
+
+.cs-visual__image {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+}
+
+.cs-visual__caption {
+  margin-top: 1rem;
+  color: #666;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.cs-package-card__visual {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-muted);
+}
+
+.cs-package-card__image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+}
+
+.cs-package-card__caption {
+  font-size: 0.85rem;
+  color: #666;
+  font-style: italic;
+  margin: 0;
+}
+
+.cs-download {
+  text-align: center;
+  margin: var(--space-md) 0;
+}
+
+.cs-download__button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: var(--color-primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background var(--dur) var(--ease),
+    transform var(--dur) var(--ease);
+}
+
+.cs-download__button:hover {
+  background: var(--color-secondary);
+  transform: translateY(-2px);
+}
+
+/* — Metrics — */
+.cs-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.cs-metric {
+  text-align: center;
+  padding: 2rem;
+  background: var(--color-muted);
+  border-radius: var(--card-radius);
+  transition: transform var(--dur) var(--ease);
+}
+
+.cs-metric:hover {
+  transform: translateY(-4px);
+}
+
+.cs-metric__value {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.cs-metric__label {
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+/* — Case Study — */
+.cs-case-study {
+  background: var(--color-muted);
+  padding: 2rem;
+  border-radius: var(--card-radius);
+  margin: 2rem 0;
+}
+
+.cs-case-study__metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.cs-case-study__metric {
+  text-align: center;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+}
+
+.cs-case-study__value {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.cs-case-study__label {
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+
+/* — Social Proof — */
+.cs-quotes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.cs-quote {
+  background: var(--color-muted);
+  padding: 2rem;
+  border-radius: var(--card-radius);
+  margin: 0;
+  position: relative;
+}
+
+.cs-quote::before {
+  content: """;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 4rem;
+  color: var(--color-primary);
+  opacity: 0.2;
+  font-family: serif;
+}
+
+.cs-quote p {
+  font-size: 1.1rem;
+  font-style: italic;
+  margin: 0 0 1rem 0;
+  color: var(--color-text);
+}
+
+.cs-quote cite {
+  font-size: 0.9rem;
+  color: #666;
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* — Responsive Design — */
+@media (max-width: 1200px) {
+  :root {
+    --page-margin: 2rem;
+  }
+
+  .cs-package-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .cs-section--context {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-project-info__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+
+  .cs-hero__title {
+    font-size: 2.5rem;
+  }
+
+  .cs-package-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-visual__image {
+    max-width: 100%;
+  }
+
+  .cs-hero__badges {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cs-metrics,
+  .cs-case-study__metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-quotes {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .cs-project-info__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
+}

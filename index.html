@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Playbook • Efram Geller</title>
+    <meta
+      name="description"
+      content="Efram Geller's portfolio - merging sports analytics with human-centered design"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/base.css" />
+    <script defer src="js/main.js"></script>
+  </head>
+  <body>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- Sticky Header -->
+    <header class="sticky-header">
+      <div class="brand-container">
+        <img
+          src="assets/img/profile_icon.jpg"
+          alt="Efram's profile"
+          class="profile-icon"
+        />
+        <a href="/" class="brand">Efram Geller</a>
+      </div>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="/" class="return-link">Return to Portfolio</a>
+        <a href="#featured" aria-current="page">Featured</a>
+        <a href="#about">About Me</a>
+        <a href="resume.pdf" target="_blank">Resume</a>
+        <a
+          href="https://twitter.com/eframgeller"
+          target="_blank"
+          class="social-link"
+          >𝕏</a
+        >
+        <a href="#contact">Contact Me</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-content">
+          <h1 class="tagline">
+            <span class="highlight" id="typeText"></span>
+          </h1>
+          <p class="sub-headline">
+            Data drives my decisions. UX makes the story stick.
+          </p>
+          <div class="metric" aria-live="polite">
+            <span id="metricNum">0</span>%
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Card -->
+      <section class="pad" id="featured">
+        <h2>Opening Play</h2>
+        <p class="section-intro">
+          Every great playbook starts with a signature move. Here's mine.
+        </p>
+        <div class="featured-card big">
+          <div class="featured-badge">FEATURED</div>
+          <a
+            class="card flip"
+            href="/studies/12M-portfolio/"
+            aria-label="12M Analytics - Featured Project"
+          >
+            <div class="flip-inner">
+              <div class="flip-front">
+                <img
+                  src="studies/12M-portfolio/images/12M_logo.jpeg"
+                  alt="12M Analytics Dashboard"
+                />
+                <h3>12M Analytics</h3>
+                <p>
+                  Sports analytics consulting firm serving college football
+                  teams
+                </p>
+              </div>
+              <div class="flip-back">
+                <div class="stat">3+</div>
+                <div class="description">
+                  College football teams using our analytics platform
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- Sports Tech Projects -->
+      <section class="pad" id="sports">
+        <h2>Product Thinking in Sports Tech</h2>
+        <p class="section-intro">
+          Merging analytics with product thinking to create impactful solutions
+          in sports.
+        </p>
+        <div class="card-grid">
+          <a href="/studies/draft_guide_portfolio/" class="card">
+            <img
+              src="studies/draft_guide_portfolio/assets/2023_sample_page.png"
+              alt="NFL Draft Guides"
+            />
+            <h3>NFL Draft Guides</h3>
+            <p>Comprehensive scouting reports and analytics platform</p>
+            <div class="scouting-note">
+              Role: Product Designer • Streamlined 5 workflows
+            </div>
+          </a>
+          <a href="/studies/BSN-portfolio/" class="card">
+            <img
+              src="studies/BSN-portfolio/images/mission.png"
+              alt="Brown Sports Network"
+            />
+            <h3>Brown Sports Network</h3>
+            <p>Digital platform for Brown University athletics</p>
+            <div class="scouting-note">
+              Role: Product Lead • Enhanced fan engagement
+            </div>
+          </a>
+          <a href="/studies/steelers_depot_portfolio/" class="card">
+            <img
+              src="studies/steelers_depot_portfolio/assets/seniorbowl/IMG_6007 2.JPG"
+              alt="Steelers Depot"
+            />
+            <h3>Steelers Depot Profiles</h3>
+            <p>Film room analysis reaching 50K+ monthly readers</p>
+            <div class="scouting-note">
+              Role: Analytics Lead • 3x reader engagement
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- Product Design -->
+      <section class="pad" id="design">
+        <h2>Product Design</h2>
+        <p class="section-intro">
+          Crafting intuitive experiences that solve real problems.
+        </p>
+        <div class="card-grid">
+          <a href="/studies/textswap_portfolio/" class="card">
+            <img
+              src="studies/textswap_portfolio/images/opening_page.png"
+              alt="TextSwap Marketplace"
+            />
+            <h3>TextSwap Marketplace</h3>
+            <p>Bootstrapped textbook exchange app to 400+ users</p>
+            <div class="scouting-note">
+              Role: Founder • 72% faster sell-time
+            </div>
+          </a>
+          <a href="/studies/Iterative-Design-portfolio/" class="card">
+            <img
+              src="studies/Iterative-Design-portfolio/images/sketches/dani1.png"
+              alt="WARP AI"
+            />
+            <h3>WARP AI</h3>
+            <p>AI-powered player development platform</p>
+            <div class="scouting-note">
+              Role: Product Designer • 2x training efficiency
+            </div>
+          </a>
+          <a href="/studies/printer-cs-portfolio/" class="card">
+            <img
+              src="studies/printer-cs-portfolio/images/interface/sketch.png"
+              alt="Printer App"
+            />
+            <h3>Printer App</h3>
+            <p>Streamlined game plan distribution system</p>
+            <div class="scouting-note">
+              Role: Full Stack • 90% faster deployment
+            </div>
+          </a>
+          <a href="/studies/redesign-project-portfolio/" class="card">
+            <img
+              src="studies/redesign-project-portfolio/images/main_mockup.png"
+              alt="Kai Fan Experience"
+            />
+            <h3>Kai Fan Experience</h3>
+            <p>Reimagining the digital stadium experience</p>
+            <div class="scouting-note">
+              Role: UX Lead • 40% higher engagement
+            </div>
+          </a>
+          <a href="/studies/photoshop-portfolio/" class="card">
+            <img
+              src="studies/photoshop-portfolio/images/general/fire_hands.png"
+              alt="Photoshop Works"
+            />
+            <h3>Photoshop Works</h3>
+            <p>Creative design projects and digital art</p>
+            <div class="scouting-note">
+              Role: Designer • Visual storytelling
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <small>© 2025 Efram Geller • Built with vanilla HTML + CSS + JS</small>
+    </footer>
+  </body>
+</html>

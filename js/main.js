@@ -1,0 +1,278 @@
+// TYPEWRITER + COUNTER
+const phrase = "I merge sports analytics with human-centered design";
+const typeEl = document.getElementById("typeText");
+const metricEl = document.getElementById("metricNum");
+let idx = 0;
+
+function typeLoop() {
+  if (typeEl && idx <= phrase.length) {
+    typeEl.classList.add("typing"); // Add cursor while typing
+    typeEl.textContent = phrase.slice(0, idx++);
+    setTimeout(() => requestAnimationFrame(typeLoop), 50);
+  } else {
+    // Keep cursor blinking for 1.5 seconds after typing
+    setTimeout(() => {
+      typeEl.classList.remove("typing"); // Remove cursor
+      startCounter(); // Start the counter animation
+      document.body.classList.add("intro-loaded");
+    }, 1500);
+  }
+}
+
+function startCounter() {
+  // Fade in the metric element
+  const metric = document.querySelector(".metric");
+  if (metric) {
+    metric.style.opacity = "1";
+    metric.style.transform = "translateX(0)";
+  }
+
+  let n = 0,
+    target = 100;
+  const accentColor = "#ff3b30";
+  const finalColor = "#fff0ef";
+
+  const int = setInterval(() => {
+    if (metricEl) {
+      metricEl.textContent = n;
+
+      // Animate border color based on progress
+      if (metric) {
+        const progress = n / target;
+        const color = interpolateColor(accentColor, finalColor, progress);
+        metric.style.setProperty("--border-color", color);
+      }
+
+      if (n++ === target) {
+        clearInterval(int);
+        metric.style.setProperty("--border-color", finalColor);
+      }
+    }
+  }, 30);
+}
+
+// Color interpolation helper function
+function interpolateColor(color1, color2, factor) {
+  // Convert hex to RGB
+  const c1 = hexToRgb(color1);
+  const c2 = hexToRgb(color2);
+
+  // Interpolate each channel
+  const r = Math.round(c1.r + (c2.r - c1.r) * factor);
+  const g = Math.round(c1.g + (c2.g - c1.g) * factor);
+  const b = Math.round(c1.b + (c2.b - c1.b) * factor);
+
+  return `rgb(${r}, ${g}, ${b})`;
+}
+
+function hexToRgb(hex) {
+  // Remove # if present
+  hex = hex.replace("#", "");
+
+  // Handle both short and long hex
+  const r = parseInt(hex.length === 3 ? hex[0] + hex[0] : hex.slice(0, 2), 16);
+  const g = parseInt(hex.length === 3 ? hex[1] + hex[1] : hex.slice(2, 4), 16);
+  const b = parseInt(hex.length === 3 ? hex[2] + hex[2] : hex.slice(4, 6), 16);
+
+  return { r, g, b };
+}
+
+// Start animations when DOM is loaded
+document.addEventListener("DOMContentLoaded", () => {
+  if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    // Reset initial states
+    const metric = document.querySelector(".metric");
+    if (metric) {
+      metric.style.opacity = "0";
+      metric.style.transform = "translateX(-20px)";
+      metric.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+    }
+    setTimeout(typeLoop, 500);
+  } else {
+    // If reduced motion is preferred, just show the content
+    if (typeEl) typeEl.textContent = phrase;
+    if (metricEl) metricEl.textContent = "100";
+  }
+});
+
+// Intersection Observer for scroll animations
+const observerOptions = {
+  threshold: 0.15,
+  rootMargin: "50px",
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("reveal");
+
+      // Handle stat banners for cards
+      if (entry.target.classList.contains("card")) {
+        const note = entry.target.querySelector(".scouting-note");
+        if (note) {
+          showStatBanner(note.textContent);
+        }
+      }
+
+      // Animate numbers
+      if (entry.target.dataset.stat) {
+        animateNumber(entry.target);
+      }
+    }
+  });
+}, observerOptions);
+
+// Animate stat numbers
+function animateNumber(element) {
+  const target = parseInt(element.dataset.stat);
+  const duration = 1500;
+  const start = Date.now();
+
+  const update = () => {
+    const now = Date.now();
+    const progress = Math.min((now - start) / duration, 1);
+    const value = Math.round(target * progress);
+    element.textContent = value;
+
+    if (progress < 1) {
+      requestAnimationFrame(update);
+    }
+  };
+
+  update();
+}
+
+// ESPN-style stat banner
+function showStatBanner(text) {
+  const banner = document.createElement("div");
+  banner.className = "stat-banner";
+  banner.textContent = text;
+  document.body.appendChild(banner);
+
+  // Force reflow
+  banner.offsetHeight;
+
+  requestAnimationFrame(() => {
+    banner.classList.add("show");
+
+    setTimeout(() => {
+      banner.classList.remove("show");
+      setTimeout(() => banner.remove(), 400);
+    }, 3000);
+  });
+}
+
+// Initialize animations
+document.addEventListener("DOMContentLoaded", () => {
+  // Animate cards
+  document.querySelectorAll(".card").forEach((card) => {
+    card.classList.add("pre-reveal");
+    observer.observe(card);
+  });
+
+  // Animate stats
+  document.querySelectorAll("[data-stat]").forEach((stat) => {
+    observer.observe(stat);
+  });
+
+  // Animate hero text
+  const heroText = document.querySelector(".tagline .highlight");
+  const subHeadline = document.querySelector(".sub-headline");
+
+  if (heroText && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    heroText.style.opacity = "0";
+    heroText.style.transform = "translateY(20px)";
+
+    setTimeout(() => {
+      heroText.style.transition = "all 0.8s ease";
+      heroText.style.opacity = "1";
+      heroText.style.transform = "translateY(0)";
+
+      if (subHeadline) {
+        setTimeout(() => {
+          subHeadline.style.opacity = "1";
+          subHeadline.style.transform = "translateY(0)";
+        }, 300);
+      }
+    }, 300);
+  }
+});
+
+// Handle navigation highlighting
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll(".site-nav a");
+
+function updateNavigation() {
+  const scrollPosition = window.scrollY + 100; // Offset for header
+
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+    const sectionId = section.getAttribute("id");
+
+    if (
+      scrollPosition >= sectionTop &&
+      scrollPosition < sectionTop + sectionHeight
+    ) {
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href").includes(sectionId)) {
+          link.classList.add("active");
+          link.setAttribute("aria-current", "page");
+        } else {
+          link.removeAttribute("aria-current");
+        }
+      });
+    }
+  });
+}
+
+window.addEventListener("scroll", updateNavigation);
+updateNavigation(); // Initial call
+
+// Handle smooth scrolling
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute("href"));
+    if (target) {
+      target.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  });
+});
+
+// TIMELINE SCROLL‑TRIGGER
+document.querySelectorAll(".timeline").forEach((tl) => {
+  const steps = tl.dataset.steps.split("→");
+
+  // Create the line and football elements
+  const lineDiv = document.createElement("div");
+  lineDiv.className = "line";
+
+  const football = document.createElement("div");
+  football.className = "football";
+  lineDiv.appendChild(football);
+
+  // Build timeline HTML
+  tl.innerHTML = "";
+  tl.appendChild(lineDiv);
+  steps.forEach((s) => {
+    const span = document.createElement("span");
+    span.textContent = s.trim();
+    tl.appendChild(span);
+  });
+
+  // Observe timeline
+  const observer = new IntersectionObserver(
+    (entries) => {
+      if (entries[0].isIntersecting) {
+        tl.classList.add("in");
+        observer.disconnect();
+      }
+    },
+    { threshold: 0.4 }
+  );
+  observer.observe(tl);
+});
