@@ -1,5 +1,5 @@
 // TYPEWRITER + COUNTER
-const phrase = "I merge sports analytics with human-centered design";
+const phrase = "I merge sports technology with human-centered design";
 const typeEl = document.getElementById("typeText");
 const metricEl = document.getElementById("metricNum");
 let idx = 0;
