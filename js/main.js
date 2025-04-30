@@ -77,50 +77,11 @@ function hexToRgb(hex) {
   return { r, g, b };
 }
 
-// Start animations when DOM is loaded
-document.addEventListener("DOMContentLoaded", () => {
-  if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    // Reset initial states
-    const metric = document.querySelector(".metric");
-    if (metric) {
-      metric.style.opacity = "0";
-      metric.style.transform = "translateX(-20px)";
-      metric.style.transition = "opacity 0.6s ease, transform 0.6s ease";
-    }
-    setTimeout(typeLoop, 500);
-  } else {
-    // If reduced motion is preferred, just show the content
-    if (typeEl) typeEl.textContent = phrase;
-    if (metricEl) metricEl.textContent = "100";
-  }
-});
-
 // Intersection Observer for scroll animations
 const observerOptions = {
   threshold: 0.15,
   rootMargin: "50px",
 };
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("reveal");
-
-      // Handle stat banners for cards
-      if (entry.target.classList.contains("card")) {
-        const note = entry.target.querySelector(".scouting-note");
-        if (note) {
-          showStatBanner(note.textContent);
-        }
-      }
-
-      // Animate numbers
-      if (entry.target.dataset.stat) {
-        animateNumber(entry.target);
-      }
-    }
-  });
-}, observerOptions);
 
 // Animate stat numbers
 function animateNumber(element) {
@@ -161,42 +122,6 @@ function showStatBanner(text) {
     }, 3000);
   });
 }
-
-// Initialize animations
-document.addEventListener("DOMContentLoaded", () => {
-  // Animate cards
-  document.querySelectorAll(".card").forEach((card) => {
-    card.classList.add("pre-reveal");
-    observer.observe(card);
-  });
-
-  // Animate stats
-  document.querySelectorAll("[data-stat]").forEach((stat) => {
-    observer.observe(stat);
-  });
-
-  // Animate hero text
-  const heroText = document.querySelector(".tagline .highlight");
-  const subHeadline = document.querySelector(".sub-headline");
-
-  if (heroText && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    heroText.style.opacity = "0";
-    heroText.style.transform = "translateY(20px)";
-
-    setTimeout(() => {
-      heroText.style.transition = "all 0.8s ease";
-      heroText.style.opacity = "1";
-      heroText.style.transform = "translateY(0)";
-
-      if (subHeadline) {
-        setTimeout(() => {
-          subHeadline.style.opacity = "1";
-          subHeadline.style.transform = "translateY(0)";
-        }, 300);
-      }
-    }, 300);
-  }
-});
 
 // Handle navigation highlighting
 const sections = document.querySelectorAll("section[id]");
@@ -277,12 +202,27 @@ document.querySelectorAll(".timeline").forEach((tl) => {
   observer.observe(tl);
 });
 
-// Scroll Reveal Animation
+// main.js
+
+// … all your helper functions (typeLoop, startCounter, animateNumber, etc.) …
+
 document.addEventListener("DOMContentLoaded", () => {
+  // 1. Typewriter + Counter
+  if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    document.querySelector(".metric").style.opacity = 0;
+    document.querySelector(".metric").style.transform = "translateX(-20px)";
+    document.querySelector(".metric").style.transition =
+      "opacity 0.6s ease, transform 0.6s ease";
+    setTimeout(typeLoop, 500);
+  } else {
+    typeEl.textContent = phrase;
+    metricEl.textContent = "100";
+  }
+
+  // 2. Scroll-reveal cards
   const cards = document.querySelectorAll(".card");
   cards.forEach((card) => card.classList.add("pre-reveal"));
-
-  const observer = new IntersectionObserver(
+  const revealObserver = new IntersectionObserver(
     (entries, obs) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -293,6 +233,12 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     { threshold: 0.1 }
   );
+  cards.forEach((card) => revealObserver.observe(card));
 
-  cards.forEach((card) => observer.observe(card));
+  // 3. Stats animation (if you’re still using data-stat attributes)
+  document
+    .querySelectorAll("[data-stat]")
+    .forEach((el) => observer.observe(el));
+
+  // 4. Hero text fade-in is already covered by your CSS keyframes
 });

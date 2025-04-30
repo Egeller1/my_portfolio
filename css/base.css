@@ -148,9 +148,9 @@ a {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url("../assets/images/play1.png") top left no-repeat,
-    url("../assets/images/play2.png") center no-repeat,
-    url("../assets/images/play3.png") bottom right no-repeat;
+  background: url("../assets/img/play1.png") top left no-repeat,
+    url("../assets/img/play2.png") center right no-repeat,
+    url("../assets/img/play3.png") bottom center no-repeat;
   background-size: 20% auto, 25% auto, 20% auto;
   opacity: 0.07;
   pointer-events: none;
@@ -158,6 +158,8 @@ a {
 }
 
 .hero-content {
+  position: relative;
+  z-index: 2;
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
@@ -165,11 +167,13 @@ a {
 }
 
 .hero-avatar {
+  position: relative;
+  z-index: 3;
   width: 120px;
   height: 120px;
   border-radius: 50%;
   margin-bottom: 2rem;
-  border: 3px solid var(--accent-color);
+  border: 3px solid var(--clr-accent);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
@@ -671,14 +675,13 @@ a:hover {
   color: var(--clr-accent);
 }
 
-/* Scroll Reveal Animation */
+/* Scroll-reveal utility for cards */
 .pre-reveal {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
-
-.pre-reveal.reveal {
+.reveal {
   opacity: 1;
   transform: translateY(0);
 }
