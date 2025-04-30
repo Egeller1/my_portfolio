@@ -167,10 +167,10 @@ a {
 }
 
 .hero-avatar {
-  position: relative;
   display: flex;
   justify-content: center;
-
+  margin-left: auto;
+  margin-right: auto;
   z-index: 3;
   width: 160px;
   height: 160px;
