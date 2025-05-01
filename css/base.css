@@ -240,7 +240,7 @@ a {
 
   padding: 0.75rem 1.5rem;
 
-  font-weight: 700; /* match .tagline’s boldness */
+  font-weight: 700; /* match .tagline's boldness */
   font-size: clamp(1.5rem, 4vw, 2rem);
   border: 2.5px solid var(--clr-accent);
   border-radius: 0.5rem;
@@ -713,4 +713,89 @@ footer {
   padding: 2rem 1rem;
   font-size: 0.9rem;
   color: var(--clr-text-muted);
+}
+
+/* Contact Form Styles */
+.contact-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: var(--clr-surface);
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--clr-text-main);
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 0.5rem;
+  font-family: var(--font-base);
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--clr-accent);
+  box-shadow: 0 0 0 2px rgba(58, 185, 142, 0.1);
+}
+
+.submit-btn {
+  background: var(--clr-accent);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(58, 185, 142, 0.2);
+}
+
+/* Card hover effects for About and Contact pages */
+.card a {
+  color: var(--clr-accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.card a:hover {
+  color: var(--clr-text-main);
+}
+
+/* Timeline enhancements */
+.timeline {
+  margin: 3rem 0;
+}
+
+.timeline .line {
+  background: linear-gradient(to right, var(--clr-accent), transparent);
+}
+
+/* Section intro enhancements */
+.section-intro p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--clr-text-muted);
+  margin-bottom: 2rem;
 }

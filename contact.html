@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me • Efram Geller</title>
+    <meta
+      name="description"
+      content="Get in touch with Efram Geller - Product Designer and Sports Tech Innovator"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Local CSS/JS -->
+    <link rel="stylesheet" href="css/base.css" />
+    <script defer src="js/main.js"></script>
+  </head>
+  <body>
+    <!-- Skip link for accessibility -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- Sticky Header -->
+    <header class="sticky-header">
+      <div class="brand-container">
+        <img
+          src="assets/img/profile_icon.jpg"
+          alt="Efram's profile"
+          class="profile-icon"
+        />
+        <a href="./" class="brand">Efram Geller</a>
+      </div>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html#featured">Featured</a>
+        <a href="about.html">About Me</a>
+        <a href="assets/img/Resume.pdf" target="_blank">Resume</a>
+        <a
+          href="https://twitter.com/eframgeller"
+          target="_blank"
+          class="social-link"
+          >𝕏</a
+        >
+        <a href="contact.html" class="active" aria-current="page">Contact Me</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <!-- Contact Hero Section -->
+      <section class="hero">
+        <div class="hero-content">
+          <h1 class="tagline">
+            <span class="highlight">Let's Connect</span>
+          </h1>
+          <p class="sub-headline">
+            I'm always open to discussing new projects, creative ideas, or
+            opportunities to be part of your vision.
+          </p>
+        </div>
+      </section>
+
+      <!-- Contact Content -->
+      <section class="pad">
+        <div class="section-intro">
+          <h2>Get in Touch</h2>
+          <p>
+            Whether you're interested in collaborating on a project, discussing
+            sports technology, or just want to say hello, I'd love to hear from
+            you.
+          </p>
+        </div>
+
+        <div class="card-grid">
+          <div class="card">
+            <h3>Email</h3>
+            <p>
+              <a href="mailto:efram_geller@brown.edu">efram_geller@brown.edu</a>
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Social</h3>
+            <p>
+              <a href="https://twitter.com/eframgeller" target="_blank"
+                >Twitter (𝕏)</a
+              ><br />
+              <a href="https://linkedin.com/in/eframgeller" target="_blank"
+                >LinkedIn</a
+              >
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Location</h3>
+            <p>
+              Providence, RI<br />
+              Available for remote work
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Form -->
+      <section class="pad">
+        <h2>Send a Message</h2>
+        <form
+          class="contact-form"
+          action="https://formspree.io/f/your-form-id"
+          method="POST"
+        >
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <small>© 2025 Efram Geller • Built with vanilla HTML + CSS + JS</small>
+    </footer>
+  </body>
+</html>
