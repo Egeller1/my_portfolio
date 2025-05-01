@@ -23,21 +23,27 @@ function startCounter() {
   const metric = document.querySelector(".metric");
   if (!metric) return;
 
-  // fade/slide-in
+  // entrance animation (if you have one)
   metric.style.opacity = "1";
   metric.style.transform = "translateX(0)";
 
   let n = 0,
     target = 100;
-  const int = setInterval(() => {
-    // update the number
-    metric.textContent = n;
 
-    // update the fill percent
+  const int = setInterval(() => {
+    // update fill percent
     const pct = (n / target) * 100;
     metric.style.setProperty("--progress", `${pct}%`);
 
-    if (n++ >= target) clearInterval(int);
+    // update the text
+    metric.textContent = `Taking Projects From 0 to ${n}%`;
+
+    if (n++ >= target) {
+      clearInterval(int);
+      // final state (ensure exactly 100%)
+      metric.style.setProperty("--progress", `100%`);
+      metric.textContent = `Taking Projects From 0 to 100%`;
+    }
   }, 30);
 }
 
