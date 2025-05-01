@@ -418,6 +418,9 @@ a:hover {
 
 .cs-solution__text {
   flex: 1 1 300px;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.6;
 }
 
 .cs-solution__media {
@@ -570,20 +573,26 @@ a:hover {
   background: var(--color-muted);
 }
 
-/* — Sponsors — */
+/* Sponsors */
 .cs-sponsors {
+  width: 100%;
+  background: var(--color-muted);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+}
+
+.cs-sponsors__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
   align-items: center;
   justify-items: center;
   padding: 2rem;
-  background: var(--color-muted);
-  border-radius: 1rem;
 }
 
 .cs-sponsor-logo {
-  max-width: 150px;
+  max-width: 250px;
+  width: 100%;
   height: auto;
   filter: grayscale(100%);
   opacity: 0.8;
@@ -593,6 +602,7 @@ a:hover {
 .cs-sponsor-logo:hover {
   filter: grayscale(0%);
   opacity: 1;
+  transform: scale(1.05);
 }
 
 /* — Responsive Design — */
@@ -620,14 +630,14 @@ a:hover {
     margin: 1rem auto;
   }
 
-  .cs-sponsors {
+  .cs-sponsors__grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    padding: 1rem;
+    gap: 2rem;
+    padding: 1.5rem;
   }
 
   .cs-sponsor-logo {
-    max-width: 120px;
+    max-width: 180px;
   }
 
   .cs-projects-grid {
@@ -650,8 +660,14 @@ a:hover {
     gap: var(--space-sm);
   }
 
-  .cs-sponsors {
+  .cs-sponsors__grid {
     grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  .cs-sponsor-logo {
+    max-width: 200px;
   }
 }
 
@@ -841,32 +857,6 @@ a:hover {
   color: white;
 }
 
-/* — Sponsors — */
-.cs-sponsors__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 2rem;
-  align-items: center;
-  justify-items: center;
-  padding: 2rem;
-  background: var(--color-muted);
-  border-radius: var(--border-radius);
-}
-
-.cs-sponsor-logo {
-  max-width: 150px;
-  height: auto;
-  filter: grayscale(100%);
-  opacity: 0.8;
-  transition: all 0.3s ease;
-}
-
-.cs-sponsor-logo:hover {
-  filter: grayscale(0%);
-  opacity: 1;
-  transform: scale(1.05);
-}
-
 /* — Chart — */
 .cs-chart {
   padding: 2rem;
@@ -904,16 +894,6 @@ a:hover {
     width: 2rem;
     height: 2rem;
     font-size: 1rem;
-  }
-
-  .cs-sponsors__grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    padding: 1rem;
-  }
-
-  .cs-sponsor-logo {
-    max-width: 120px;
   }
 
   .cs-chart {
