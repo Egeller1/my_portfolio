@@ -23,24 +23,21 @@ function startCounter() {
   const metric = document.querySelector(".metric");
   if (!metric) return;
 
-  // fade/slide in
+  // fade/slide-in
   metric.style.opacity = "1";
   metric.style.transform = "translateX(0)";
 
   let n = 0,
     target = 100;
-
   const int = setInterval(() => {
     // update the number
     metric.textContent = n;
 
-    // compute percent fill
+    // update the fill percent
     const pct = (n / target) * 100;
     metric.style.setProperty("--progress", `${pct}%`);
 
-    if (n++ >= target) {
-      clearInterval(int);
-    }
+    if (n++ >= target) clearInterval(int);
   }, 30);
 }
 

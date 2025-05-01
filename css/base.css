@@ -694,6 +694,13 @@ a,
 .sub-headline {
   color: var(--clr-text-muted);
 }
+.loading-text {
+  display: block;
+  color: #000; /* always black */
+  margin-bottom: 1rem; /* spacing before the counter */
+  font-size: 2rem; /* match your hero */
+  font-weight: 600;
+}
 
 a:hover {
   color: var(--clr-accent);
