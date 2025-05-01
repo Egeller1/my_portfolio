@@ -808,3 +808,52 @@ footer {
   color: var(--clr-text-muted);
   margin-bottom: 2rem;
 }
+
+.identity .name {
+  font: 700 2.8rem/1 var(--font-display);
+}
+.identity .roles {
+  font: 500 1.2rem/1.4 var(--font-base);
+  color: var(--clr-text-muted);
+}
+
+.impact-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 2rem;
+  padding: 3rem 0;
+  background: var(--clr-surface);
+}
+.impact-bar .metric {
+  text-align: center;
+}
+.impact-bar strong {
+  font-size: 2rem;
+  display: block;
+  color: var(--clr-accent);
+}
+.impact-bar span {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.story-card {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  border-radius: 1rem;
+  transition: transform 0.35s;
+}
+.story-card:hover {
+  transform: translateY(-6px);
+}
+
+.cta-strip {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: var(--clr-accent);
+  color: #fff;
+}
+.cta-strip h2 {
+  margin-bottom: 1rem;
+}

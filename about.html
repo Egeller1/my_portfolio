@@ -1,140 +1,90 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Me • Efram Geller</title>
-    <meta
-      name="description"
-      content="Learn more about Efram Geller - Product Designer and Sports Tech Innovator"
-    />
+<!-- ===== HERO ===== -->
+<section class="hero about-hero">
+  <div class="hero-content">
+    <h1 class="identity">
+      <span class="name">Efram Geller</span>
+      <span class="roles"
+        >Sports-Tech Builder · Analytics Consultant · NFL Draft Journalist</span
+      >
+    </h1>
+    <p class="tagline">
+      Sophomore @ Brown CS-Econ, crafting data-driven products at the
+      intersection of sports, tech & storytelling.
+    </p>
+    <a href="contact.html" class="btn-primary">Let’s work together →</a>
+  </div>
+</section>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
+<!-- ===== IMPACT METRICS ===== -->
+<section class="impact-bar">
+  <div class="metric"><strong>73.5 %</strong><span>Rush-yd boost</span></div>
+  <div class="metric"><strong>60 K+</strong><span>Article reads</span></div>
+  <div class="metric"><strong>100 +</strong><span>Industry execs</span></div>
+  <div class="metric"><strong>240 +</strong><span>Students Involved</span></div>
+</section>
 
-    <!-- Local CSS/JS -->
-    <link rel="stylesheet" href="css/base.css" />
-    <script defer src="js/main.js"></script>
-  </head>
-  <body>
-    <!-- Skip link for accessibility -->
-    <a href="#main" class="skip-link">Skip to main content</a>
+<!-- ===== SIGNATURE STORIES ===== -->
+<section class="pad stories">
+  <h2 class="section-title">Signature Work</h2>
 
-    <!-- Sticky Header -->
-    <header class="sticky-header">
-      <div class="brand-container">
-        <img
-          src="assets/img/profile_icon.jpg"
-          alt="Efram's profile"
-          class="profile-icon"
-        />
-        <a href="./" class="brand">Efram Geller</a>
-      </div>
-      <nav class="site-nav" aria-label="Main navigation">
-        <a href="index.html#featured">Featured</a>
-        <a href="about.html" class="active" aria-current="page">About Me</a>
-        <a href="assets/img/Resume.pdf" target="_blank">Resume</a>
-        <a
-          href="https://twitter.com/eframgeller"
-          target="_blank"
-          class="social-link"
-          >𝕏</a
-        >
-        <a href="contact.html">Contact Me</a>
-      </nav>
-    </header>
+  <article class="story-card">
+    <h3>12M Analytics</h3>
+    <p>
+      Founder & President — grew from 4 to 14 analysts; delivered weekly reports
+      that lifted 4th-down conversion by 13 % and yards/carry by 0.7.
+    </p>
+    <a href="12m_case.html" class="arrow-link">Full case →</a>
+  </article>
 
-    <main id="main">
-      <!-- About Hero Section -->
-      <section class="hero">
-        <div class="hero-content">
-          <h1 class="tagline">
-            <span class="highlight">About Me</span>
-          </h1>
-          <p class="sub-headline">Product Designer & Sports Tech Innovator</p>
-        </div>
-      </section>
+  <article class="story-card">
+    <h3>EverTrue Analytics</h3>
+    <p>
+      Rebuilt Brown’s varsity analytics arm into a 40-person unit across 5
+      verticals, boosting red-zone efficiency by 8 % for Football.
+    </p>
+    <a href="evertrue_case.html" class="arrow-link">Full case →</a>
+  </article>
 
-      <!-- About Content -->
-      <section class="pad">
-        <div class="section-intro">
-          <h2>My Journey</h2>
-          <p>
-            I'm a product designer and sports technology innovator with a
-            passion for merging strategic thinking with human-centered design.
-            My journey in sports tech began at Brown University, where I founded
-            the Brown Sports Network and helped launch careers for over 240
-            students in the sports industry.
-          </p>
-        </div>
+  <article class="story-card">
+    <h3>Brown Sports Network</h3>
+    <p>
+      Co-founded & lead alumni infrastructure, engaging 100+ leaders across NFL,
+      NBA & Premier League; spearheading JL Sports predictive draft tool.
+    </p>
+    <a href="bsn_case.html" class="arrow-link">Full case →</a>
+  </article>
 
-        <div class="card-grid">
-          <div class="card">
-            <h3>Background</h3>
-            <p>
-              With a strong foundation in both product design and sports
-              analytics, I've developed expertise in creating solutions that
-              bridge the gap between data-driven insights and user experience.
-              My work spans from NFL draft analysis to college football
-              analytics platforms.
-            </p>
-          </div>
+  <article class="story-card">
+    <h3>NFL Draft Guides</h3>
+    <p>
+      Authored three 120-page guides profiling 100+ prospects each; Senior Bowl
+      + Super Bowl credentialed reporter with 60 K season reads.
+    </p>
+    <a href="draft_case.html" class="arrow-link">Full case →</a>
+  </article>
+</section>
 
-          <div class="card">
-            <h3>Expertise</h3>
-            <p>
-              • Product Design & Strategy<br />
-              • Sports Analytics & Data Visualization<br />
-              • User Experience Design<br />
-              • Sports Technology Innovation<br />
-              • Project Management
-            </p>
-          </div>
+<!-- ===== TIMELINE ===== -->
+<section class="pad timeline-block">
+  <h2 class="section-title">Journey</h2>
+  <div
+    class="timeline"
+    data-steps="2021 Draft Guide Launched→2023 EverTrue Relaunch -> 2024→12M Founded→2025 BSN Co-founder→"
+  >
+    <!-- football line & steps injected via existing JS -->
+  </div>
+</section>
 
-          <div class="card">
-            <h3>Impact</h3>
-            <p>
-              My projects have reached over 50K monthly readers, engaged 240+
-              students, and connected 63 industry executives. I focus on
-              creating solutions that make a real impact in the sports
-              technology space.
-            </p>
-          </div>
-        </div>
-      </section>
+<!-- ===== TESTIMONIAL ===== -->
+<section class="pad testimonial">
+  <blockquote>
+    “I had Brown Sports Network existed when I was at Brown”<br />
+    <cite>— Anonymous NFL Executive</cite>
+  </blockquote>
+</section>
 
-      <!-- Experience Timeline -->
-      <section class="pad">
-        <h2>Experience</h2>
-        <div class="timeline">
-          <div class="line"></div>
-          <span>2023 - Present</span>
-        </div>
-        <div class="card-grid">
-          <div class="card">
-            <h3>Brown Sports Network</h3>
-            <p>Founder & Director</p>
-          </div>
-          <div class="card">
-            <h3>12M Analytics</h3>
-            <p>Product Designer</p>
-          </div>
-          <div class="card">
-            <h3>Steelers Depot</h3>
-            <p>Film Analyst</p>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <small>© 2025 Efram Geller • Built with vanilla HTML + CSS + JS</small>
-    </footer>
-  </body>
-</html>
+<!-- ===== CALL TO ACTION ===== -->
+<section class="cta-strip">
+  <h2>Looking to talk?</h2>
+  <a href="contact.html" class="btn-primary">Start a conversation →</a>
+</section>
