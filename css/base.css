@@ -889,29 +889,32 @@ footer {
 }
 
 /* ===== MARQUEE STATS ===== */
-.stats-marquee {
+stats-marquee {
   overflow: hidden;
   background: var(--clr-surface);
   padding: 0.75rem 0;
 }
+
 .marquee {
-  display: inline-block;
+  display: inline-block; /* or flex; either works */
   white-space: nowrap;
-  animation: marquee 35s linear infinite;
+  animation: marquee 35s linear infinite; /* slower if you like */
   font-family: var(--font-display);
   font-size: 1rem;
 }
+
 .marquee span {
   margin-right: 2rem;
   color: var(--clr-chalk);
   font-weight: 600;
 }
+
 @keyframes marquee {
-  0% {
-    transform: translateX(100%);
+  from {
+    transform: translateX(0);
   }
-  100% {
-    transform: translateX(-100%);
+  to {
+    transform: translateX(-50%);
   }
 }
 
