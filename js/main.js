@@ -20,33 +20,26 @@ function typeLoop() {
 }
 
 function startCounter() {
-  // Fade in the metric element
   const metric = document.querySelector(".metric");
-  if (metric) {
-    metric.style.opacity = "1";
-    metric.style.transform = "translateX(0)";
-  }
+  if (!metric) return;
+
+  // fade/slide in
+  metric.style.opacity = "1";
+  metric.style.transform = "translateX(0)";
 
   let n = 0,
     target = 100;
-  const accentColor = "#ff3b30";
-  const finalColor = "#3ab98e";
 
   const int = setInterval(() => {
-    if (metricEl) {
-      metricEl.textContent = n;
+    // update the number
+    metric.textContent = n;
 
-      // Animate border color based on progress
-      if (metric) {
-        const progress = n / target;
-        const color = interpolateColor(accentColor, finalColor, progress);
-        metric.style.setProperty("--border-color", color);
-      }
+    // compute percent fill
+    const pct = (n / target) * 100;
+    metric.style.setProperty("--progress", `${pct}%`);
 
-      if (n++ === target) {
-        clearInterval(int);
-        metric.style.setProperty("--border-color", finalColor);
-      }
+    if (n++ >= target) {
+      clearInterval(int);
     }
   }, 30);
 }

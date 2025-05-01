@@ -228,17 +228,30 @@ a {
 }
 
 .metric {
+  /* 1. Add a progress var that JS will update */
+  --progress: 0%;
+
   display: inline-block;
   font-size: 1.5rem;
-  color: var(--clr-accent);
   padding: 0.5rem 1rem;
-  border: 2px solid;
-  border-color: var(--border-color, var(--clr-accent));
+  border: 2px solid var(--clr-accent);
   border-radius: 0.5rem;
+
+  /* 2. Use a gradient that switches from green → white at var(--progress) */
+  background: linear-gradient(
+    to right,
+    var(--clr-accent) var(--progress),
+    #ffffff var(--progress)
+  );
+
+  /* 3. Keep text a dark color so it’s always readable */
+  color: #000;
+
+  /* your existing entrance animation + transitions */
   opacity: 0;
   transform: translateX(-20px);
   animation: slideIn 0.6s ease forwards 1.5s;
-  transition: border-color 0.2s ease;
+  transition: background 0.2s ease;
 }
 
 @keyframes fadeUp {
