@@ -857,3 +857,125 @@ footer {
 .cta-strip h2 {
   margin-bottom: 1rem;
 }
+
+/* ===== ABOUT HERO ===== */
+.about-hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 6rem 2rem 4rem;
+  max-width: var(--wrapper-max);
+  margin: 0 auto;
+}
+.about-photo img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--clr-accent);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.about-hero__copy {
+  flex: 1 1 300px;
+}
+.about-name {
+  font: 700 clamp(2.5rem, 5vw, 3rem) / 1 var(--font-display);
+  margin: 0;
+}
+.about-tag {
+  font-size: 1.2rem;
+  color: var(--clr-text-muted);
+  max-width: 40ch;
+}
+
+/* ===== MARQUEE STATS ===== */
+.stats-marquee {
+  overflow: hidden;
+  background: var(--clr-surface);
+  padding: 0.75rem 0;
+}
+.marquee {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 20s linear infinite;
+  font-family: var(--font-display);
+  font-size: 1rem;
+}
+.marquee span {
+  margin-right: 2rem;
+  color: var(--clr-chalk);
+  font-weight: 600;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* ===== BIO ===== */
+.bio ul {
+  margin: 1rem 0 0 1.25rem;
+  padding: 0;
+}
+.bio li {
+  margin-bottom: 0.5rem;
+}
+
+/* ===== VERTICAL TIMELINE ===== */
+.vertical-timeline {
+  list-style: none;
+  margin: 2rem 0 0;
+  padding: 0;
+  position: relative;
+}
+.vertical-timeline::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--clr-accent);
+}
+.vertical-timeline li {
+  position: relative;
+  padding-left: 3.5rem;
+  margin-bottom: 2rem;
+}
+.vertical-timeline .year {
+  position: absolute;
+  left: -0.15rem;
+  top: 0;
+  background: var(--clr-accent);
+  color: #fff;
+  border-radius: 50%;
+  width: 1.75rem;
+  height: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.vertical-timeline div {
+  font-size: 1rem;
+  color: var(--clr-text-main);
+}
+
+/* ===== OVERRIDES: remove play diagrams only on About ===== */
+.about-hero,
+.bio,
+.timeline-block,
+.stats-marquee,
+.cta-strip {
+  /* no overlay */
+}
+.about-hero::before,
+.pad.bio::before,
+.timeline-block::before {
+  display: none !important;
+}
