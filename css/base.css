@@ -233,6 +233,13 @@ a {
   filter: blur(var(--blur-radius));
   transition: filter 0.05s linear; /* smooth as it updates */
 }
+
+/* Disable blur & transition when .noblur is applied */
+.below-hero.noblur {
+  filter: none !important;
+  transition: none !important;
+}
+
 .metric {
   --progress: 0%; /* driven by JS */
   font-family: var(--font-display);

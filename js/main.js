@@ -205,6 +205,14 @@ document.querySelectorAll(".timeline").forEach((tl) => {
 // … all your helper functions (typeLoop, startCounter, animateNumber, etc.) …
 
 document.addEventListener("DOMContentLoaded", () => {
+  // 0) Skip blur when user navigates back/forward
+  const belowHero = document.querySelector(".below-hero");
+  const navEntries = performance.getEntriesByType("navigation");
+  const navType = navEntries.length ? navEntries[0].type : "navigate";
+  if (navType === "back_forward") {
+    belowHero.classList.add("noblur");
+  }
+
   // 1. Typewriter + Counter
   if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
     document.querySelector(".metric").style.opacity = 0;
