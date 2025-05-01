@@ -258,19 +258,30 @@ a {
 /* ---------- Sections ---------- */
 .pad {
   background: #ffffff;
+  padding: 4rem 2rem;
+  border-top: 1px solid #e0e0e0;
+  position: relative; /* needed for the pseudo‐element */
+}
+
+.pad::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+
   background: url("../assets/img/play1.png") top left no-repeat,
     url("../assets/img/play2.png") center right no-repeat,
     url("../assets/img/play3.png") bottom center no-repeat;
   background-size: 40% auto, 40% auto, 40% auto;
-  opacity: 0.7;
 
-  padding: 4rem 2rem;
-  border-top: 1px solid #e0e0e0;
+  opacity: 0.2; /* lower value = more subtle overlay */
 }
-/*
 
-.pad::before {
-  display: none;
+/* make sure everything inside .pad sits above the diagrams */
+.pad > * {
+  position: relative;
+  z-index: 2;
 }
 */
 /* Ensure proper stacking context */
