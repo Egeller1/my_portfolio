@@ -312,7 +312,7 @@ section {
   max-width: var(--content-max);
   margin: -1rem auto 3rem;
   color: var(--clr-text-muted);
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   line-height: 1.6;
   position: relative;
   z-index: 2;
