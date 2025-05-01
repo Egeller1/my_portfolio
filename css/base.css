@@ -148,11 +148,7 @@ a {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url("../assets/img/play1.png") top left no-repeat,
-    url("../assets/img/play2.png") center right no-repeat,
-    url("../assets/img/play3.png") bottom center no-repeat;
-  background-size: 600% auto, 60% auto, 60% auto;
-  opacity: 0.7;
+
   pointer-events: none;
   z-index: 1;
 }
