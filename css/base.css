@@ -116,7 +116,7 @@ a {
 .site-nav a.active {
   opacity: 1;
   color: var(--clr-chalk);
-  border-color: rgba(255, 255, 255, 0.2);
+  border-color: var(--clr-accent);
 }
 
 .site-nav a.active::after {
@@ -273,6 +273,12 @@ a {
   padding: 4rem 2rem;
   border-top: 1px solid #e0e0e0;
   position: relative; /* needed for the pseudo‐element */
+
+  @media (max-width: 768px) {
+    .pad {
+      padding: 3rem 1rem;
+    }
+  }
 }
 
 .pad::before {
@@ -295,7 +301,7 @@ a {
   position: relative;
   z-index: 2;
 }
-*/
+
 /* Ensure proper stacking context */
 section {
   position: relative;
@@ -405,10 +411,11 @@ h2:hover .chip {
 /* ---------- Featured Card ---------- */
 .featured-card {
   max-width: 60rem;
-  margin: auto;
+  margin: auto 0 2rem;
   position: relative;
-  height: 40rem;
-  margin-bottom: 2rem;
+  /* height: auto so it grows with content: */
+  height: auto;
+  aspect-ratio: 3 / 2; /* keeps a nice shape */
 }
 
 .featured-card .card {
@@ -714,4 +721,16 @@ a:hover {
 .reveal {
   opacity: 1;
   transform: translateY(0);
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  color: var(--clr-text-muted);
+}
+
+/* slap this at the bottom of base.css */
+main > .pad:nth-of-type(even) {
+  background: var(--clr-surface);
 }
