@@ -116,7 +116,7 @@ a {
 .site-nav a.active {
   opacity: 1;
   color: var(--clr-chalk);
-  border-color: var(--clr-accent);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .site-nav a.active::after {
@@ -411,11 +411,10 @@ h2:hover .chip {
 /* ---------- Featured Card ---------- */
 .featured-card {
   max-width: 60rem;
-  margin: auto 0 2rem;
+  margin: auto;
   position: relative;
-  /* height: auto so it grows with content: */
-  height: auto;
-  aspect-ratio: 3 / 2; /* keeps a nice shape */
+  height: 40rem;
+  margin-bottom: 2rem;
 }
 
 .featured-card .card {
@@ -724,13 +723,9 @@ a:hover {
 }
 
 footer {
+  /* no styles right now */
   text-align: center;
   padding: 2rem 1rem;
   font-size: 0.9rem;
   color: var(--clr-text-muted);
-}
-
-/* slap this at the bottom of base.css */
-main > .pad:nth-of-type(even) {
-  background: var(--clr-surface);
 }
