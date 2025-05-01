@@ -21,28 +21,30 @@ function typeLoop() {
 
 function startCounter() {
   const metric = document.querySelector(".metric");
-  if (!metric) return;
+  const content = document.querySelector(".below-hero");
+  if (!metric || !content) return;
 
-  // entrance animation (if you have one)
   metric.style.opacity = "1";
   metric.style.transform = "translateX(0)";
 
   let n = 0,
     target = 100;
+  const maxBlur = 20; // matches your CSS default
 
   const int = setInterval(() => {
-    // update fill percent
+    // 1) update counter + fill
     const pct = (n / target) * 100;
+    metric.textContent = `Taking Projects From 0 to ${n}%`;
     metric.style.setProperty("--progress", `${pct}%`);
 
-    // update the text
-    metric.textContent = `Taking Projects From 0 to ${n}%`;
+    // 2) compute remaining blur: goes from maxBlur→0
+    const blur = maxBlur * (1 - n / target);
+    content.style.setProperty("--blur-radius", `${blur}px`);
 
+    // finish
     if (n++ >= target) {
       clearInterval(int);
-      // final state (ensure exactly 100%)
-      metric.style.setProperty("--progress", `100%`);
-      metric.textContent = `Taking Projects From 0 to 100%`;
+      content.style.setProperty("--blur-radius", `0px`);
     }
   }, 30);
 }
