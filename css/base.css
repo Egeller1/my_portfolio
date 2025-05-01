@@ -623,22 +623,6 @@ h2:hover .chip {
   margin: 0;
 }
 
-/* Scouting Note Overlay */
-.card .scouting-note {
-  position: absolute;
-  bottom: 1rem;
-  left: 1rem;
-  background: rgba(0, 0, 0, 0.8);
-  color: var(--clr-chalk);
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  font-size: 0.875rem;
-  opacity: 0;
-  transform: translateY(10px);
-  transition: all 0.3s ease;
-  pointer-events: none;
-}
-
 .card:hover .scouting-note {
   opacity: 1;
   transform: translateY(0);
