@@ -433,7 +433,7 @@
       <div class="cs-quote">
         <blockquote>
           Nearly every Brown alum we speak to in the sports world says the same
-          thing: ‘I wish this existed when I was at Brown.’
+          thing: 'I wish this existed when I was at Brown.'
         </blockquote>
       </div>
       <h2 class="cs-section__title">💭 Final Reflection</h2>
@@ -512,13 +512,41 @@
       const nav = document.querySelector(".cs-subnav");
       const navTop = nav.offsetTop;
 
+      // Get all sections and nav links
+      const sections = document.querySelectorAll(".cs-section");
+      const navLinks = document.querySelectorAll(".cs-subnav__link");
+
+      // Update active nav link based on scroll position
+      const updateActiveNavLink = () => {
+        let current = "";
+
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          if (window.scrollY >= sectionTop - 100) {
+            current = "#" + section.getAttribute("id");
+          }
+        });
+
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === current) {
+            link.classList.add("active");
+          }
+        });
+      };
+
       window.addEventListener("scroll", () => {
         if (window.scrollY >= navTop) {
           nav.classList.add("sticky");
         } else {
           nav.classList.remove("sticky");
         }
+        updateActiveNavLink();
       });
+
+      // Initial check for active section
+      updateActiveNavLink();
 
       // Carousel Functionality
       const carousels = document.querySelectorAll(".cs-carousel");
