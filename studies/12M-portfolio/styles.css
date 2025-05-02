@@ -292,7 +292,13 @@ a:hover {
   gap: 0.5em;
   color: var(--color-primary);
 }
-
+#vision .cs-section__text {
+  background-color: #f9f9f9;
+  padding: 1rem 1.25rem;
+  border-left: 4px solid var(--color-primary);
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
 .cs-section__text {
   max-width: 100%;
   font-size: var(--fs-body);
@@ -347,6 +353,33 @@ a:hover {
   margin: 2rem 0;
 }
 
+/* Chart Solution Variant */
+.cs-solution--chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem;
+  background: white;
+  border: 1px solid var(--color-muted);
+  box-shadow: var(--card-shadow);
+}
+
+.cs-solution__chart {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+}
+
+.cs-solution__caption {
+  font-size: 0.95rem;
+  color: #666;
+  text-align: center;
+  font-style: italic;
+  margin: 0;
+  max-width: 600px;
+}
+
 .cs-solution__text {
   flex: 1 1 300px;
 }
@@ -396,39 +429,51 @@ a:hover {
   background: var(--color-muted);
 }
 
-/* — Package Details — */
+/* — Section Intro — */
+.cs-section__intro {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+/* — Package Grid — */
 .cs-package-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--space-md);
-  margin: var(--space-md) 0;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: 3rem 0;
 }
 
 .cs-package-card {
   background: white;
+  border: 1px solid var(--color-muted);
   border-radius: var(--card-radius);
   box-shadow: var(--card-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
-  transition: transform var(--dur) var(--ease),
-    box-shadow var(--dur) var(--ease);
 }
 
 .cs-package-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
 .cs-package-card__header {
   background: var(--color-primary);
-  color: white;
   padding: 1.5rem;
+  color: white;
 }
 
 .cs-package-card__header h3 {
   color: white;
   margin: 0;
   font-size: 1.25rem;
-  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .cs-package-card__content {
@@ -442,31 +487,29 @@ a:hover {
 }
 
 .cs-package-card__content li {
-  margin-bottom: 1.5rem;
-  padding-bottom: 1.5rem;
+  padding: 1.25rem 0;
   border-bottom: 1px solid var(--color-muted);
 }
 
 .cs-package-card__content li:last-child {
-  margin-bottom: 0;
-  padding-bottom: 0;
   border-bottom: none;
+  padding-bottom: 0;
 }
 
 .cs-package-card__content strong {
   display: block;
   color: var(--color-primary);
-  margin-bottom: 0.5rem;
   font-size: 1.1rem;
+  margin-bottom: 0.5rem;
 }
 
 .cs-package-card__content p {
   margin: 0.5rem 0;
-  color: var(--color-text);
-  font-size: 0.95rem;
+  color: #666;
   line-height: 1.5;
 }
 
+/* — Package Card Examples — */
 .cs-package-card__example {
   display: block;
   margin-top: 0.75rem;
@@ -476,6 +519,37 @@ a:hover {
   font-size: 0.9rem;
   color: #666;
   font-style: italic;
+  border-left: 3px solid var(--color-primary);
+}
+
+/* — Solution Examples — */
+.cs-solution .cs-package-card__example {
+  margin-top: 0.5rem;
+  background: rgba(46, 204, 113, 0.1);
+}
+
+/* — Download CTA — */
+.cs-download {
+  text-align: center;
+  margin: 4rem 0 2rem;
+}
+
+.cs-download__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: var(--color-primary);
+  color: white;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.cs-download__button:hover {
+  background: var(--color-secondary);
+  transform: translateY(-2px);
+  color: white;
 }
 
 /* — Visual Elements — */
@@ -516,28 +590,6 @@ a:hover {
   color: #666;
   font-style: italic;
   margin: 0;
-}
-
-.cs-download {
-  text-align: center;
-  margin: var(--space-md) 0;
-}
-
-.cs-download__button {
-  display: inline-block;
-  padding: 1rem 2rem;
-  background: var(--color-primary);
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: 500;
-  transition: background var(--dur) var(--ease),
-    transform var(--dur) var(--ease);
-}
-
-.cs-download__button:hover {
-  background: var(--color-secondary);
-  transform: translateY(-2px);
 }
 
 /* — Metrics — */
@@ -625,8 +677,9 @@ a:hover {
   position: relative;
 }
 
+/* — Quote Fix — */
 .cs-quote::before {
-  content: """;
+  content: "\201C";
   position: absolute;
   top: 1rem;
   left: 1rem;
@@ -695,6 +748,15 @@ a:hover {
 
   .cs-quotes {
     grid-template-columns: 1fr;
+  }
+
+  .cs-section__intro {
+    font-size: 1.1rem;
+    padding: 0 1rem;
+  }
+
+  .cs-package-card {
+    margin: 0 1rem;
   }
 }
 

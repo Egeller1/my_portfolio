@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="300" viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .process-text { font-family: 'Inter', sans-serif; font-size: 16px; fill: #333; }
+    .process-title { font-family: 'Inter', sans-serif; font-size: 18px; font-weight: bold; fill: #2ecc71; }
+    .process-desc { font-family: 'Inter', sans-serif; font-size: 14px; fill: #666; }
+    .process-arrow { fill: none; stroke: #2ecc71; stroke-width: 2; }
+    .process-circle { fill: white; stroke: #2ecc71; stroke-width: 2; }
+    .process-icon { fill: #2ecc71; }
+  </style>
+
+  <!-- Data Collection -->
+  <g transform="translate(100, 150)">
+    <circle class="process-circle" cx="0" cy="0" r="40"/>
+    <path class="process-icon" d="M-15,-15 h30 v30 h-30z"/>
+    <text class="process-title" x="0" y="70" text-anchor="middle">Data Collection</text>
+    <text class="process-desc" x="0" y="90" text-anchor="middle">Game Film &amp; Stats</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <path class="process-arrow" d="M160,150 H240"/>
+  <polygon points="240,145 250,150 240,155" fill="#2ecc71"/>
+
+  <!-- Analysis -->
+  <g transform="translate(300, 150)">
+    <circle class="process-circle" cx="0" cy="0" r="40"/>
+    <path class="process-icon" d="M-15,-15 l30,30 M-15,15 l30,-30"/>
+    <text class="process-title" x="0" y="70" text-anchor="middle">Analysis</text>
+    <text class="process-desc" x="0" y="90" text-anchor="middle">Advanced Metrics</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <path class="process-arrow" d="M360,150 H440"/>
+  <polygon points="440,145 450,150 440,155" fill="#2ecc71"/>
+
+  <!-- Strategy -->
+  <g transform="translate(500, 150)">
+    <circle class="process-circle" cx="0" cy="0" r="40"/>
+    <path class="process-icon" d="M-15,0 l30,0 M0,-15 l0,30"/>
+    <text class="process-title" x="0" y="70" text-anchor="middle">Strategy</text>
+    <text class="process-desc" x="0" y="90" text-anchor="middle">Game Planning</text>
+  </g>
+
+  <!-- Arrow 3 -->
+  <path class="process-arrow" d="M560,150 H640"/>
+  <polygon points="640,145 650,150 640,155" fill="#2ecc71"/>
+
+  <!-- Implementation -->
+  <g transform="translate(700, 150)">
+    <circle class="process-circle" cx="0" cy="0" r="40"/>
+    <path class="process-icon" d="M-15,-15 l30,30 M-15,15 l30,-30"/>
+    <text class="process-title" x="0" y="70" text-anchor="middle">Implementation</text>
+    <text class="process-desc" x="0" y="90" text-anchor="middle">Sideline Tools</text>
+  </g>
+
+  <!-- Arrow 4 -->
+  <path class="process-arrow" d="M760,150 H840"/>
+  <polygon points="840,145 850,150 840,155" fill="#2ecc71"/>
+
+  <!-- Results -->
+  <g transform="translate(900, 150)">
+    <circle class="process-circle" cx="0" cy="0" r="40"/>
+    <path class="process-icon" d="M-15,15 l15,-30 l15,30"/>
+    <text class="process-title" x="0" y="70" text-anchor="middle">Results</text>
+    <text class="process-desc" x="0" y="90" text-anchor="middle">Performance Gains</text>
+  </g>
+
+  <!-- Feedback Loop Arrow -->
+  <path class="process-arrow" d="M960,150 C1050,150 1050,50 900,50 C700,50 300,50 100,50 C50,50 50,100 50,150"/>
+  <polygon points="45,150 50,160 55,150" fill="#2ecc71"/>
+</svg> 

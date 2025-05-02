@@ -447,3 +447,123 @@ a:hover {
   margin: 0;
   font-size: 0.9rem;
 }
+
+.cs-event-block {
+  margin-bottom: var(--space-lg) !important;
+  background: #fff !important;
+  border-radius: 12px !important;
+  padding: 2rem !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* — Live Events: side-by-side image + video galleries — */
+.cs-media-showcase {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+@media (min-width: 768px) {
+  .cs-media-showcase {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Video grid inside each half */
+.cs-video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--space-md);
+}
+
+/* Image grid inside each half */
+.cs-image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--space-md);
+}
+
+/* Reuse your existing .cs-image-item & .cs-video-card styles */
+/* Just make sure images fill their containers */
+.cs-image-item img,
+.cs-video-player {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+/* ———————————————————————————————
+   𝗖𝗦-𝗠𝗲𝗱𝗶𝗮-𝗦𝗵𝗼𝘄𝗰𝗮𝘀𝗲 & 𝗖𝗦-𝗘𝘃𝗲𝗻𝘁-𝗕𝗹𝗼𝗰𝗸
+   Senior Bowl 2024 live-events gallery
+   ——————————————————————————————— */
+
+/* Wrap stills + videos in two columns on desktop */
+.cs-media-showcase {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+@media (min-width: 768px) {
+  .cs-media-showcase {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Stills grid */
+.cs-image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
+
+/* Videos grid */
+.cs-video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
+
+/* Video card container */
+.cs-video-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-muted);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Video element: use poster both as attribute and fallback background */
+.cs-video-player {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* Caption styling */
+.cs-video-caption,
+.cs-caption {
+  padding: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--color-text);
+  text-align: center;
+  background: rgba(255, 255, 255, 0.6);
+  margin-top: auto;
+}
+
+/* Image item styling (reuses captions) */
+.cs-image-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.cs-image-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
