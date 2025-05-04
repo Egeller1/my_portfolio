@@ -567,3 +567,83 @@ a:hover {
   display: block;
   object-fit: cover;
 }
+
+/* Live Events Section */
+.live-event {
+  margin-bottom: 3rem;
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.live-event h3 {
+  font-size: var(--fs-md);
+  margin: 0 0 0.5rem 0;
+  color: var(--color-text);
+}
+
+.event-location {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+figure {
+  margin: 0;
+  background: #f8f8f8;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Separate styling for images and videos */
+figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+figure video {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: none; /* Remove any max-height restrictions */
+}
+
+/* Make credentials image smaller */
+figure:first-child img {
+  max-height: 200px;
+  width: auto;
+  margin: 0 auto;
+}
+
+figcaption {
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+  background: #fff;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .media-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .live-event {
+    padding: 1rem;
+  }
+
+  figure:first-child img {
+    max-height: 150px;
+  }
+}
